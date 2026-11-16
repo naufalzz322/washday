@@ -1,0 +1,7 @@
+# Agent/tooling session artifacts
+.hermes/
+.playwright-mcp/
+
+# OS
+Thumbs.db
+.DS_Store

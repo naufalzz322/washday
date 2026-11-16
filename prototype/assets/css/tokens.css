@@ -1,0 +1,88 @@
+@font-face {
+  font-family: 'Inter Tight';
+  src: url('../fonts/InterTight-Variable.woff2') format('woff2');
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+}
+
+:root {
+  color-scheme: light;
+
+  /* Core palette */
+  --canvas: #eef4f8;
+  --ink: #0e1115;
+  --ink-secondary: #1d2b36;
+  --text-secondary: #566572;
+
+  /* Neutral surfaces */
+  --slate-100: #e9eff4;
+  --slate-400: #7f93a4;
+  --slate-500: #5e7384;
+  --slate-700: #43596b;
+  --dotted-border: #b6c5d0;
+  --hairline: rgba(14, 17, 21, .085);
+
+  /* Accents */
+  --teal-100: #dceff3;
+  --teal-500: #3e9ab0;
+  --teal-600: #2b7f94;
+  --teal-700: #1f6f84;
+  --amber-100: #fcefd4;
+  --amber-200: #f7dda8;
+  --amber-500: #f0a020;
+  --amber-700: #8a5200;
+  --red-500: #ef5b4b;
+
+  /* Shape */
+  --r-8: 8px;
+  --r-12: 12px;
+  --r-16: 16px;
+  --r-20: 20px;
+  --r-24: 24px;
+  --r-28: 28px;
+  --r-pill: 999px;
+  --gutter: 20px;
+
+  /* Depth */
+  --card-shadow: 0 12px 34px rgba(31, 55, 74, .085);
+  --card-shadow-soft: 0 6px 20px rgba(31, 55, 74, .06);
+  --shadow-float: 0 18px 46px rgba(31, 55, 74, .18);
+
+  /* Motion */
+  --ease: cubic-bezier(.2, 0, 0, 1);
+  --dur-fast: 100ms;
+  --dur: 200ms;
+
+  /* Type */
+  --font: 'Inter Tight', 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+  --text-h1: clamp(30px, 8.4vw, 36px);
+  --text-body: 15px;
+  --text-small: 13px;
+  --text-meta: 12px;
+  --text-label: 11px;
+  --leading-tight: 1.04;
+
+  /* Semantic status */
+  --status-done: var(--teal-600);
+  --status-current: var(--amber-500);
+  --status-current-bg: var(--amber-100);
+  --status-current-ink: var(--amber-700);
+
+  /* Shell */
+  --nav-height: 64px;
+  --nav-bottom: max(12px, env(safe-area-inset-bottom));
+  --dock-height: 56px;
+  --dock-gap: 8px;
+  --dock-clearance: 176px;
+
+  font-family: var(--font);
+  color: var(--ink);
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+}
+
+@media (max-width: 370px) {
+  :root { --gutter: 16px; }
+}

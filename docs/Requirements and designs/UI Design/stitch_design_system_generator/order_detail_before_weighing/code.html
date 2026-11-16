@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><meta content="mobile_stack" name="shell-type"/><style>@layer base{html,body{width:100vw;margin:0;padding:0;min-height:100%;}body{overscroll-behavior:none;background-color:#EEF3F7;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{"colors":{"slate-100":"#E8EDF2","on-secondary-fixed-variant":"#643f00","surface-bright":"#f8f9ff","sky-mid":"#DCE8F0","amber-500":"#F0A020","on-secondary-fixed":"#2a1800","text-secondary":"#5F6873","on-tertiary-fixed-variant":"#8e130e","tertiary-container":"#bb362a","secondary":"#845400","red-600":"#C5332B","surface":"#FFFFFF","outline-variant":"#bfc8cc","on-secondary-container":"#6a4300","red-500":"#EF5B4B","on-error":"#ffffff","primary":"#005669","amber-700":"#8A5200","background":"#f8f9ff","surface-dim":"#d0dbeb","on-surface":"#111c28","sky-top":"#C3D6E6","surface-tint":"#11677c","surface-variant":"#d8e3f4","inverse-on-surface":"#e9f1ff","surface-container":"#e4efff","teal-500":"#3E9AB0","on-tertiary-fixed":"#410001","tertiary":"#991c15","primary-container":"#1f6f84","on-tertiary":"#ffffff","tertiary-fixed":"#ffdad5","ink-950":"#0E0F11","secondary-fixed-dim":"#ffb95a","on-secondary":"#ffffff","teal-100":"#DCEEF3","amber-100":"#FCEFD4","outline":"#6f797c","primary-fixed":"#b3ebff","error-container":"#ffdad6","error":"#ba1a1a","inverse-primary":"#8ad1e8","on-primary-fixed-variant":"#004e5f","secondary-container":"#fcaa2c","surface-container-lowest":"#ffffff","slate-700":"#4B5B6A","text-disabled":"#8B94A0","teal-600":"#2B7F94","peach-glow":"#F6EAE2","ink-800":"#1C2733","red-700":"#B3261E","slate-500":"#5E7384","on-primary-container":"#bbedff","red-100":"#FCE4E1","surface-container-low":"#eef4ff","inverse-surface":"#26313e","on-primary":"#ffffff","on-background":"#111c28","primary-fixed-dim":"#8ad1e8","on-primary-fixed":"#001f27","on-surface-variant":"#3f484c","slate-400":"#8296A8","surface-container-highest":"#d8e3f4","tertiary-fixed-dim":"#ffb4a9","canvas":"#EEF3F7","on-tertiary-container":"#ffded9","secondary-fixed":"#ffddb6","dotted-border":"#B8C4CE","surface-container-high":"#dee9fa","teal-700":"#1F6F84","on-error-container":"#93000a"},"borderRadius":{"DEFAULT":"0.25rem","lg":"0.5rem","xl":"0.75rem","full":"9999px"},"spacing":{"space-xs":"0.25rem","space-md":"1rem","space-sm":"0.5rem","space-lg":"1.5rem","margin":"1rem","gutter":"1rem","space-xl":"2.5rem"},"fontFamily":{"label-sm":["Inter"],"label-lg":["Inter"],"headline-md":["Inter"],"body-md":["Inter"],"body-lg":["Inter"],"headline-lg":["Inter"],"body-sm":["Inter"],"headline-xl":["Inter"],"label-md":["Inter"],"headline-sm":["Inter"]},"fontSize":{"label-sm":["11px",{"lineHeight":"14px","letterSpacing":"0.03em","fontWeight":"500"}],"label-lg":["14px",{"lineHeight":"20px","fontWeight":"600"}],"headline-md":["22px",{"lineHeight":"28px","letterSpacing":"-0.01em","fontWeight":"600"}],"body-md":["14px",{"lineHeight":"20px","fontWeight":"400"}],"body-lg":["16px",{"lineHeight":"24px","fontWeight":"400"}],"headline-lg":["26px",{"lineHeight":"34px","letterSpacing":"-0.015em","fontWeight":"700"}],"body-sm":["13px",{"lineHeight":"18px","fontWeight":"400"}],"headline-xl":["32px",{"lineHeight":"40px","letterSpacing":"-0.02em","fontWeight":"700"}],"label-md":["12px",{"lineHeight":"16px","letterSpacing":"0.02em","fontWeight":"600"}],"headline-sm":["18px",{"lineHeight":"24px","fontWeight":"600"}]}}}};</script><style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head><body class="bg-canvas text-on-surface antialiased flex flex-col min-h-screen relative selection:bg-teal-100 selection:text-teal-700"><div class="fixed inset-0 pointer-events-none z-0 bg-gradient-to-b from-sky-top via-sky-mid to-canvas h-72"></div><header class="fixed top-0 w-full z-50 pt-safe bg-surface/70 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="h-28 px-gutter flex flex-col justify-between pb-space-sm"><div class="flex items-center justify-between pt-space-xs text-ink-800"><span class="font-label-md text-label-md tracking-tight">9:41</span><div class="flex items-center gap-space-xs text-ink-800"><span class="material-symbols-outlined text-[16px]">signal_cellular_alt</span><span class="material-symbols-outlined text-[16px]">wifi</span><span class="material-symbols-outlined text-[18px]">battery_full</span></div></div><div class="flex items-center justify-between gap-space-sm"><div class="flex items-center gap-space-xs min-w-0"><button aria-label="Go back" class="w-11 h-11 -ml-space-xs flex items-center justify-center rounded-full text-ink-950 hover:bg-surface/50 active:bg-surface/70 transition-colors" onclick="history.back()"><span class="material-symbols-outlined text-[24px]">arrow_back</span></button><h1 class="font-headline-md text-headline-md text-ink-950 truncate">Order Details</h1></div><div class="flex items-center gap-space-xs shrink-0"><span class="inline-flex items-center px-space-sm py-0.5 rounded-full bg-teal-100 text-teal-700 font-label-sm text-label-sm uppercase tracking-wide">Customer</span><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center shrink-0"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></div></header><main class="flex-1 flex flex-col relative w-full px-gutter pt-28 pb-safe bg-transparent z-10"><div class="flex flex-col w-full pb-8 space-y-4">
+<!-- Order Header Card -->
+<div class="bg-surface/80 backdrop-blur-md rounded-xl p-space-md shadow-sm">
+<div class="flex items-center justify-between gap-space-xs">
+<div class="flex items-baseline gap-1">
+<span class="font-headline-lg text-headline-lg text-ink-950 font-bold tracking-tight">#LDR-0042</span>
+</div>
+<div class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-slate-100 text-slate-700">
+<span class="material-symbols-outlined text-[14px]">schedule</span>
+<span class="font-label-sm text-label-sm uppercase tracking-wider font-semibold">Ordered</span>
+</div>
+</div>
+<div class="flex items-center gap-1.5 mt-1.5 text-text-secondary">
+<span class="material-symbols-outlined text-[16px] text-teal-600">bolt</span>
+<p class="font-body-sm text-body-sm text-slate-500 font-medium">Express • Store drop-off</p>
+</div>
+</div>
+<!-- QR Identification Card (Section 6.8) -->
+<div class="bg-surface rounded-xl p-space-md shadow-sm flex flex-col items-center text-center relative overflow-hidden">
+<div class="absolute -top-12 -right-12 w-28 h-28 bg-peach-glow/60 rounded-full blur-2xl pointer-events-none"></div>
+<div class="absolute -bottom-10 -left-10 w-24 h-24 bg-teal-100/50 rounded-full blur-xl pointer-events-none"></div>
+<div class="w-full flex items-center justify-between mb-3 text-left">
+<div class="flex items-center gap-2">
+<div class="w-7 h-7 rounded-full bg-teal-100 text-teal-700 flex items-center justify-center">
+<span class="material-symbols-outlined text-[16px]">qr_code_2</span>
+</div>
+<span class="font-label-md text-label-md text-ink-800 uppercase tracking-wider">Drop-off Pass</span>
+</div>
+<span class="font-label-sm text-label-sm text-text-secondary">Scan at counter</span>
+</div>
+<!-- Authentic Sharp SVG QR Code -->
+<div class="p-3 bg-surface rounded-xl shadow-inner my-1 flex items-center justify-center">
+<svg class="w-44 h-44 text-ink-950" fill="currentColor" viewbox="0 0 160 160">
+<!-- Finder pattern Top-Left -->
+<rect fill="currentColor" height="40" rx="3" width="40" x="10" y="10"></rect>
+<rect fill="#FFFFFF" height="28" rx="2" width="28" x="16" y="16"></rect>
+<rect fill="currentColor" height="16" rx="1.5" width="16" x="22" y="22"></rect>
+<!-- Finder pattern Top-Right -->
+<rect fill="currentColor" height="40" rx="3" width="40" x="110" y="10"></rect>
+<rect fill="#FFFFFF" height="28" rx="2" width="28" x="116" y="16"></rect>
+<rect fill="currentColor" height="16" rx="1.5" width="16" x="122" y="22"></rect>
+<!-- Finder pattern Bottom-Left -->
+<rect fill="currentColor" height="40" rx="3" width="40" x="10" y="110"></rect>
+<rect fill="#FFFFFF" height="28" rx="2" width="28" x="16" y="116"></rect>
+<rect fill="currentColor" height="16" rx="1.5" width="16" x="22" y="122"></rect>
+<!-- Timing Patterns -->
+<rect height="6" rx="1" width="6" x="56" y="24"></rect>
+<rect height="6" rx="1" width="6" x="68" y="24"></rect>
+<rect height="6" rx="1" width="6" x="80" y="24"></rect>
+<rect height="6" rx="1" width="6" x="92" y="24"></rect>
+<rect height="6" rx="1" width="6" x="24" y="56"></rect>
+<rect height="6" rx="1" width="6" x="24" y="68"></rect>
+<rect height="6" rx="1" width="6" x="24" y="80"></rect>
+<rect height="6" rx="1" width="6" x="24" y="92"></rect>
+<!-- Alignment Marker Bottom-Right -->
+<rect fill="currentColor" height="24" rx="2" width="24" x="114" y="114"></rect>
+<rect fill="#FFFFFF" height="16" rx="1" width="16" x="118" y="118"></rect>
+<rect fill="currentColor" height="8" rx="0.5" width="8" x="122" y="122"></rect>
+<!-- Stylized Data payload dots -->
+<rect height="6" rx="1" width="6" x="56" y="40"></rect>
+<rect height="6" rx="1" width="6" x="68" y="40"></rect>
+<rect height="6" rx="1" width="6" x="80" y="40"></rect>
+<rect height="6" rx="1" width="6" x="62" y="54"></rect>
+<rect height="6" rx="1" width="6" x="74" y="54"></rect>
+<rect height="6" rx="1" width="6" x="86" y="54"></rect>
+<rect height="6" rx="1" width="6" x="98" y="54"></rect>
+<rect height="6" rx="1" width="6" x="56" y="66"></rect>
+<rect height="6" rx="1" width="6" x="68" y="66"></rect>
+<rect height="6" rx="1" width="6" x="92" y="66"></rect>
+<rect height="6" rx="1" width="6" x="104" y="66"></rect>
+<rect height="6" rx="1" width="6" x="116" y="66"></rect>
+<rect height="6" rx="1" width="6" x="134" y="66"></rect>
+<rect height="6" rx="1" width="6" x="140" y="78"></rect>
+<rect height="6" rx="1" width="6" x="128" y="78"></rect>
+<rect height="6" rx="1" width="6" x="110" y="78"></rect>
+<rect height="6" rx="1" width="6" x="98" y="78"></rect>
+<rect height="6" rx="1" width="6" x="74" y="78"></rect>
+<rect height="6" rx="1" width="6" x="62" y="78"></rect>
+<rect height="6" rx="1" width="6" x="44" y="78"></rect>
+<rect height="6" rx="1" width="6" x="10" y="78"></rect>
+<rect height="6" rx="1" width="6" x="10" y="92"></rect>
+<rect height="6" rx="1" width="6" x="44" y="92"></rect>
+<rect height="6" rx="1" width="6" x="56" y="92"></rect>
+<rect height="6" rx="1" width="6" x="80" y="92"></rect>
+<rect height="6" rx="1" width="6" x="104" y="92"></rect>
+<rect height="6" rx="1" width="6" x="122" y="92"></rect>
+<rect height="6" rx="1" width="6" x="140" y="92"></rect>
+<rect height="6" rx="1" width="6" x="56" y="104"></rect>
+<rect height="6" rx="1" width="6" x="68" y="104"></rect>
+<rect height="6" rx="1" width="6" x="92" y="104"></rect>
+<rect height="6" rx="1" width="6" x="104" y="104"></rect>
+<rect height="6" rx="1" width="6" x="62" y="118"></rect>
+<rect height="6" rx="1" width="6" x="74" y="118"></rect>
+<rect height="6" rx="1" width="6" x="86" y="118"></rect>
+<rect height="6" rx="1" width="6" x="98" y="118"></rect>
+<rect height="6" rx="1" width="6" x="56" y="132"></rect>
+<rect height="6" rx="1" width="6" x="80" y="132"></rect>
+<rect height="6" rx="1" width="6" x="92" y="132"></rect>
+<rect height="6" rx="1" width="6" x="68" y="144"></rect>
+<rect height="6" rx="1" width="6" x="86" y="144"></rect>
+<rect height="6" rx="1" width="6" x="104" y="144"></rect>
+<!-- Center clean dot -->
+<circle cx="80" cy="80" fill="#3E9AB0" r="3.5"></circle>
+</svg>
+</div>
+<div class="mt-2">
+<span class="font-headline-md text-headline-md text-ink-950 font-bold tracking-tight tabular-nums">#LDR-0042</span>
+<p class="font-body-sm text-body-sm text-text-secondary mt-1">Show this to the clerk when you drop off.</p>
+</div>
+</div>
+<!-- Vertical Status Timeline (Section 6.6) -->
+<div class="bg-surface/80 backdrop-blur-md rounded-xl p-space-md shadow-sm">
+<div class="flex items-center justify-between mb-4">
+<h2 class="font-headline-sm text-headline-sm text-ink-950 font-semibold">Order Progress</h2>
+<span class="font-label-sm text-label-sm px-2 py-0.5 rounded-full bg-teal-100 text-teal-700 font-semibold">1 of 5 Steps</span>
+</div>
+<div class="relative pl-1 space-y-6">
+<!-- Step 1: Ordered (Active/Done) -->
+<div class="relative flex items-start gap-3">
+<!-- Vertical connector downward -->
+<div class="absolute left-3.5 top-7 w-[2px] h-9 bg-dotted-border"></div>
+<div class="w-7 h-7 rounded-full bg-teal-500 text-on-primary flex items-center justify-center shrink-0 shadow-sm z-10">
+<span class="material-symbols-outlined text-[16px] font-bold">check</span>
+</div>
+<div class="flex-1 min-w-0 pt-0.5">
+<div class="flex items-center justify-between">
+<span class="font-label-lg text-label-lg text-ink-950 font-semibold">Ordered</span>
+<span class="font-label-sm text-label-sm text-slate-500 tabular-nums">Today 9:15 AM</span>
+</div>
+<p class="font-body-sm text-body-sm text-text-secondary mt-0.5">Order placed in app</p>
+</div>
+</div>
+<!-- Step 2: Received (Upcoming Current Task) -->
+<div class="relative flex items-start gap-3">
+<!-- Vertical connector downward -->
+<div class="absolute left-3.5 top-7 w-[2px] h-9 bg-dotted-border"></div>
+<div class="w-7 h-7 rounded-full bg-surface text-slate-400 flex items-center justify-center shrink-0 z-10 shadow-sm">
+<div class="w-3 h-3 rounded-full bg-slate-400"></div>
+</div>
+<div class="flex-1 min-w-0 pt-0.5">
+<div class="flex items-center justify-between">
+<span class="font-label-lg text-label-lg text-ink-800 font-semibold">Received</span>
+<span class="font-label-sm text-label-sm px-2 py-0.5 rounded-full bg-amber-100 text-amber-700 font-semibold">Pending</span>
+</div>
+<p class="font-body-sm text-body-sm text-text-secondary mt-0.5">Drop off garments at counter</p>
+</div>
+</div>
+<!-- Step 3: Processing (Upcoming) -->
+<div class="relative flex items-start gap-3">
+<!-- Vertical connector downward -->
+<div class="absolute left-3.5 top-7 w-[2px] h-9 bg-dotted-border"></div>
+<div class="w-7 h-7 rounded-full bg-surface text-slate-400 flex items-center justify-center shrink-0 z-10 shadow-sm">
+<div class="w-2 h-2 rounded-full bg-slate-400"></div>
+</div>
+<div class="flex-1 min-w-0 pt-0.5">
+<span class="font-label-lg text-label-lg text-slate-500 font-medium">Processing</span>
+<p class="font-body-sm text-body-sm text-text-disabled mt-0.5">Washing, drying &amp; folding</p>
+</div>
+</div>
+<!-- Step 4: Ready (Upcoming) -->
+<div class="relative flex items-start gap-3">
+<!-- Vertical connector downward -->
+<div class="absolute left-3.5 top-7 w-[2px] h-9 bg-dotted-border"></div>
+<div class="w-7 h-7 rounded-full bg-surface text-slate-400 flex items-center justify-center shrink-0 z-10 shadow-sm">
+<div class="w-2 h-2 rounded-full bg-slate-400"></div>
+</div>
+<div class="flex-1 min-w-0 pt-0.5">
+<span class="font-label-lg text-label-lg text-slate-500 font-medium">Ready</span>
+<p class="font-body-sm text-body-sm text-text-disabled mt-0.5">Prepared for counter pickup</p>
+</div>
+</div>
+<!-- Step 5: Picked up (Upcoming) -->
+<div class="relative flex items-start gap-3">
+<div class="w-7 h-7 rounded-full bg-surface text-slate-400 flex items-center justify-center shrink-0 z-10 shadow-sm">
+<div class="w-2 h-2 rounded-full bg-slate-400"></div>
+</div>
+<div class="flex-1 min-w-0 pt-0.5">
+<span class="font-label-lg text-label-lg text-slate-500 font-medium">Picked up</span>
+<p class="font-body-sm text-body-sm text-text-disabled mt-0.5">Completed and collected</p>
+</div>
+</div>
+</div>
+</div>
+<!-- Price Breakdown Card BEFORE WEIGHING (FR-C5 Strictly Compliant: NO TOTAL) -->
+<div class="bg-surface/80 backdrop-blur-md rounded-xl p-space-md shadow-sm relative overflow-hidden">
+<div class="flex items-center justify-between pb-3">
+<div class="flex items-center gap-2">
+<div class="w-7 h-7 rounded-lg bg-teal-100 text-teal-700 flex items-center justify-center">
+<span class="material-symbols-outlined text-[16px]">receipt_long</span>
+</div>
+<h2 class="font-headline-sm text-headline-sm text-ink-950 font-semibold">Price breakdown</h2>
+</div>
+<span class="font-label-sm text-label-sm text-slate-500">Tier rate</span>
+</div>
+<!-- Per kg rate row -->
+<div class="py-2.5 flex items-center justify-between">
+<div class="flex flex-col">
+<span class="font-body-md text-body-md text-ink-800 font-medium">Price per kg</span>
+<span class="font-label-sm text-label-sm text-text-secondary">Express wash &amp; fold</span>
+</div>
+<div class="flex items-baseline gap-0.5">
+<span class="font-headline-sm text-headline-sm text-ink-950 font-semibold tabular-nums">$2.00</span>
+<span class="font-label-sm text-label-sm text-text-secondary">/kg</span>
+</div>
+</div>
+<!-- Applied Voucher Row -->
+<div class="py-2.5 flex items-center justify-between bg-teal-100/50 -mx-4 px-4 my-1">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[16px] text-teal-700">sell</span>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-ink-950 font-semibold">WELCOME10 applied</span>
+<span class="font-label-sm text-label-sm text-teal-700">Discount calculated upon weigh-in</span>
+</div>
+</div>
+<span class="font-label-sm text-label-sm text-teal-700 font-bold uppercase tracking-wider">-10%</span>
+</div>
+<!-- Friendly explanation notice box -->
+<div class="mt-3 p-3 rounded-lg bg-surface-container-low flex items-start gap-2.5">
+<span class="material-symbols-outlined text-[18px] text-teal-600 mt-0.5 shrink-0">scale</span>
+<p class="font-body-sm text-body-sm text-slate-700 leading-snug">
+        Your total is worked out when we weigh your laundry at drop-off.
+      </p>
+</div>
+</div>
+<!-- Drop-off Location info -->
+<div class="bg-surface/80 backdrop-blur-md rounded-xl p-space-md shadow-sm flex items-center justify-between">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-full bg-slate-100 flex items-center justify-center text-teal-700 shrink-0">
+<span class="material-symbols-outlined text-[20px]">storefront</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-ink-950 font-semibold">CleanPro Central Hub</span>
+<span class="font-body-sm text-body-sm text-text-secondary">742 Evergreen Terrace • Open until 9 PM</span>
+</div>
+</div>
+<button aria-label="Open directions" class="w-9 h-9 rounded-full bg-surface flex items-center justify-center text-slate-700 shadow-sm active:bg-slate-100 transition-colors">
+<span class="material-symbols-outlined text-[18px]">directions</span>
+</button>
+</div>
+<!-- Sticky / Bottom Action Area -->
+<div class="pt-2">
+<button class="w-full h-[52px] rounded-xl bg-surface text-red-700 font-label-lg text-label-lg font-semibold shadow-sm flex items-center justify-center gap-2 active:bg-red-100/60 transition-colors" id="cancel-order-btn">
+<span class="material-symbols-outlined text-[18px] text-red-600">cancel</span>
+<span>Cancel order</span>
+</button>
+</div>
+</div>
+<script>
+  (function() {
+    const cancelBtn = document.getElementById('cancel-order-btn');
+    if (cancelBtn) {
+      cancelBtn.addEventListener('click', function() {
+        if (confirm('Are you sure you want to cancel order #LDR-0042?')) {
+          cancelBtn.innerHTML = '<span class="material-symbols-outlined animate-spin text-[18px]">progress_activity</span><span>Cancelling...</span>';
+          cancelBtn.disabled = true;
+          setTimeout(() => {
+            alert('Order #LDR-0042 cancelled.');
+            history.back();
+          }, 800);
+        }
+      });
+    }
+  })();
+</script></main></body></html>

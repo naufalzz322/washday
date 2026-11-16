@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#dfedf6">
+  <meta name="description" content="Activity log — Washday laundry shop.">
+  <title>Activity log · Washday</title>
+  <link rel="icon" href="../assets/images/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="../assets/css/tokens.css">
+  <link rel="stylesheet" href="../assets/css/base.css">
+  <link rel="stylesheet" href="../assets/css/review-pages.css">
+  <link rel="stylesheet" href="../assets/css/activity.css">
+</head>
+<body class="rp-page" data-role="owner">
+  <div class="ambient" aria-hidden="true"></div>
+  <header class="topbar">
+    <div class="account-row">
+      <a class="brand-lockup" href="owner-home.html" aria-label="Washday home">
+        <span class="brand-mark" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 3.2c2.9 3.7 5.6 7 5.6 10.2a5.6 5.6 0 1 1-11.2 0c0-3.2 2.7-6.5 5.6-10.2Z" fill="currentColor"/><path d="M9.4 13.3c.2 1.6 1.3 2.6 2.8 2.8" fill="none" stroke="#0e1115" stroke-width="1.5" stroke-linecap="round"/></svg></span>
+        <span class="brand-wordmark">Washday<svg class="brand-spark" viewBox="0 0 12 12" aria-hidden="true"><path d="M6 .6 7 5l4.4 1L7 7 6 11.4 5 7 .6 6 5 5Z" fill="currentColor"/></svg></span>
+      </a>
+      <div class="header-actions"><a class="profile-switch" href="login.html" aria-label="Current profile: Owner; switch account"><span class="avatar avatar-sm role-avatar" aria-hidden="true">O</span><span class="profile-name">Owner</span><svg viewBox="0 0 16 16" aria-hidden="true"><path d="m4 6 4 4 4-4"/></svg></a></div>
+    </div>
+  </header>
+  <main class="rp-main">
+    <header class="rp-page-heading"><h1>Activity log</h1><p>Who changed what, when, and the old → new value.</p></header>
+    
+<section class="rp-card" aria-labelledby="activity-title">
+  <div class="rp-section-head"><div><p class="rp-kicker">AUDIT TRACE</p><h2 id="activity-title">Activity</h2></div><span class="rp-count" id="session-count">0 recent changes</span></div>
+  <div class="rp-filter-row" role="group" aria-label="Filter activity"><button type="button" class="rp-filter is-selected" data-activity-filter="all">All</button><button type="button" class="rp-filter" data-activity-filter="catalog">Catalog</button><button type="button" class="rp-filter" data-activity-filter="orders">Orders</button><button type="button" class="rp-filter" data-activity-filter="vouchers">Vouchers</button></div>
+  <div class="audit-feed" data-activity-feed>
+    <article class="audit-event" data-event-type="orders">
+      <span class="audit-node" aria-hidden="true"></span>
+      <div class="audit-main"><div class="audit-head"><span class="audit-actor">Clerk K</span><span class="audit-time">Today · 09:42</span><span class="audit-badge is-history">Order</span></div><h3>Order LDR-0041 status updated</h3><dl class="audit-changes"><div><dt>Status</dt><dd><span class="audit-old">Received</span><span class="audit-arrow" aria-hidden="true">→</span><span class="audit-new">Processing</span></dd></div></dl></div>
+    </article>
+    <article class="audit-event" data-event-type="orders">
+      <span class="audit-node" aria-hidden="true"></span>
+      <div class="audit-main"><div class="audit-head"><span class="audit-actor">Clerk K</span><span class="audit-time">Today · 09:15</span><span class="audit-badge is-history">Payment</span></div><h3>Order LDR-0041 payment recorded</h3><dl class="audit-changes"><div><dt>Payment</dt><dd><span class="audit-old">Unpaid</span><span class="audit-arrow" aria-hidden="true">→</span><span class="audit-new">Paid · Transfer</span></dd></div></dl></div>
+    </article>
+    <article class="audit-event" data-event-type="vouchers">
+      <span class="audit-node" aria-hidden="true"></span>
+      <div class="audit-main"><div class="audit-head"><span class="audit-actor">Owner</span><span class="audit-time">Today · 08:20</span><span class="audit-badge is-history">Voucher</span></div><h3>Voucher WELCOME10 minimum spend updated</h3><dl class="audit-changes"><div><dt>Minimum spend</dt><dd><span class="audit-old">5.00</span><span class="audit-arrow" aria-hidden="true">→</span><span class="audit-new">3.00</span></dd></div></dl></div>
+    </article>
+    <article class="audit-event" data-event-type="catalog">
+      <span class="audit-node" aria-hidden="true"></span>
+      <div class="audit-main"><div class="audit-head"><span class="audit-actor">Owner</span><span class="audit-time">Today · 08:05</span><span class="audit-badge is-history">Catalog</span></div><h3>Service “Wash &amp; fold” price updated</h3><dl class="audit-changes"><div><dt>Price</dt><dd><span class="audit-old">1.80 / kg</span><span class="audit-arrow" aria-hidden="true">→</span><span class="audit-new">2.00 / kg</span></dd></div></dl></div>
+    </article>
+    <article class="audit-event" data-event-type="catalog">
+      <span class="audit-node" aria-hidden="true"></span>
+      <div class="audit-main"><div class="audit-head"><span class="audit-actor">Owner</span><span class="audit-time">Today · 07:58</span><span class="audit-badge is-history">Catalog</span></div><h3>Category “Bedding” description updated</h3><dl class="audit-changes"><div><dt>Description</dt><dd><span class="audit-old">Sheets and covers.</span><span class="audit-arrow" aria-hidden="true">→</span><span class="audit-new">Sheets, duvet covers and household linen for a fresh reset.</span></dd></div></dl></div>
+    </article>
+    <article class="audit-event" data-event-type="orders">
+      <span class="audit-node" aria-hidden="true"></span>
+      <div class="audit-main"><div class="audit-head"><span class="audit-actor">Clerk K</span><span class="audit-time">Today · 07:40</span><span class="audit-badge is-history">Order</span></div><h3>Order LDR-0040 status updated</h3><dl class="audit-changes"><div><dt>Status</dt><dd><span class="audit-old">Processing</span><span class="audit-arrow" aria-hidden="true">→</span><span class="audit-new">Ready</span></dd></div></dl></div>
+    </article>
+  </div>
+  <p class="rp-empty" data-activity-empty hidden>No activity matches this filter.</p>
+  <p class="audit-session-empty" id="session-empty">No catalog changes yet. Add or edit a service to see the trace here.</p>
+</section>
+<div class="rp-notice"><strong>Catalog history</strong><p>Every catalog change is recorded with the owner account, time and old → new values.</p></div>
+  </main>
+  
+  <nav class="bottom-nav" aria-label="Owner navigation"><a class="nav-item" href="owner-home.html"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m3 10 9-7 9 7M5 9v12h14V9M9 21v-7h6v7"/></svg><span>Home</span></a><a class="nav-item" href="services-and-prices.html"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m8 4 4 2 4-2 5 3-2 4-3-1v10H8V10l-3 1-2-4 5-3Z"/><path d="M9 5.5c.5 1.6 1.5 2.5 3 2.5s2.5-.9 3-2.5"/></svg><span>Services</span></a><a class="nav-item" href="vouchers.html"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16v13H4zM4 10h16M8 4v6m8-6v6M8 14h3m2 0h3m-8 3h3m2 0h3"/></svg><span>Vouchers</span></a><a class="nav-item active" href="owner-more.html" aria-current="page"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="5" cy="12" r="1"/><circle cx="12" cy="12" r="1"/><circle cx="19" cy="12" r="1"/></svg><span>More</span></a></nav>
+  <script src="../assets/js/catalog-store.js"></script>
+  <script src="../assets/js/activity-log.js"></script>
+</body>
+</html>

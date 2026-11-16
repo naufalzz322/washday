@@ -1,0 +1,125 @@
+/* Order detail: reference-style tracking screen. */
+
+.od-track-hero {
+  position: relative;
+  overflow: hidden;
+  padding: 19px 18px 17px;
+  border: 1px solid rgba(255, 255, 255, .92);
+  border-radius: var(--r-28);
+  background:
+    radial-gradient(90% 100% at 100% 0%, rgba(220, 239, 243, .72) 0%, rgba(220, 239, 243, 0) 62%),
+    linear-gradient(145deg, rgba(255, 255, 255, .9) 0%, rgba(244, 250, 253, .82) 100%);
+  box-shadow: var(--card-shadow);
+}
+.od-track-hero::after {
+  position: absolute;
+  top: -56px;
+  right: -42px;
+  width: 170px;
+  height: 170px;
+  border: 1px solid rgba(62, 154, 176, .12);
+  border-radius: 50%;
+  box-shadow: 0 0 0 16px rgba(62, 154, 176, .035), 0 0 0 32px rgba(62, 154, 176, .025);
+  content: '';
+  pointer-events: none;
+}
+.od-track-top {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 10px;
+}
+.od-track-top .rp-kicker { margin: 2px 0 0; }
+.od-track-hero h1 {
+  position: relative;
+  z-index: 1;
+  margin: 13px 0 0;
+  color: var(--ink);
+  font-size: clamp(36px, 10.4vw, 46px);
+  font-weight: 640;
+  line-height: .98;
+  letter-spacing: -.055em;
+  font-variant-numeric: tabular-nums;
+}
+.od-track-meta { position: relative; z-index: 1; margin: 7px 0 0; color: var(--text-secondary); font-size: 13px; line-height: 1.45; }
+.od-chips { position: relative; z-index: 1; display: flex; flex-wrap: wrap; gap: 7px; margin-top: 14px; }
+.od-chip {
+  min-height: 34px;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 0 10px;
+  border: 1px solid rgba(255, 255, 255, .85);
+  border-radius: var(--r-pill);
+  background: rgba(255, 255, 255, .76);
+  color: var(--ink-secondary);
+  font-size: 11.5px;
+  font-weight: 590;
+  box-shadow: 0 3px 10px rgba(31, 55, 74, .04);
+}
+.od-chip svg {
+  width: 15px;
+  height: 15px;
+  fill: none;
+  stroke: var(--teal-700);
+  stroke-width: 1.6;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.od-price-line {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 14px;
+  margin-top: 13px;
+}
+.od-price-copy { display: flex; flex-direction: column; gap: 3px; }
+.od-price-copy strong { color: var(--ink); font-size: 15px; font-weight: 610; }
+.od-price-copy small { color: var(--text-secondary); font-size: 11.5px; }
+.od-price-amount {
+  color: var(--ink);
+  font-size: 28px;
+  font-weight: 640;
+  line-height: 1;
+  letter-spacing: -.05em;
+  font-variant-numeric: tabular-nums;
+}
+.od-price-amount small { color: var(--text-secondary); font-size: 12px; font-weight: 500; letter-spacing: 0; }
+.od-dashed { margin: 15px 0 0; border-top: 1.5px dashed #c0ced7; }
+.od-price-note { margin: 12px 0 0; color: var(--text-secondary); font-size: 12px; line-height: 1.5; }
+
+.od-timeline-card { padding-bottom: 19px; }
+.od-pickup {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px;
+  border: 1px solid rgba(240, 160, 32, .22);
+  border-radius: var(--r-16);
+  background: rgba(252, 239, 212, .56);
+}
+.od-pickup-icon {
+  width: 38px;
+  height: 38px;
+  flex: 0 0 38px;
+  display: grid;
+  place-items: center;
+  border-radius: 12px;
+  background: var(--amber-100);
+  color: var(--amber-700);
+}
+.od-pickup-icon svg {
+  width: 20px;
+  height: 20px;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.6;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+.od-pickup-copy { display: flex; flex-direction: column; gap: 2px; }
+.od-pickup-copy strong { color: var(--ink); font-size: 13.5px; font-weight: 620; }
+.od-pickup-copy small { color: var(--text-secondary); font-size: 11.5px; line-height: 1.4; }

@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/>
+<meta content="mobile_tab" name="shell-type"/>
+<title>Customer Home - CleanPro</title>
+<style>
+    @layer base {
+      html, body {
+        width: 100vw;
+        margin: 0;
+        padding: 0;
+        min-height: 100%;
+      }
+      body {
+        overscroll-behavior: none;
+        background-color: #EEF3F7;
+      }
+      .pb-safe { padding-bottom: env(safe-area-inset-bottom, 0px); }
+      .pt-safe { padding-top: env(safe-area-inset-top, 0px); }
+      main > :first-child { margin-top: 0 !important; }
+      main > :last-child { margin-bottom: 0 !important; }
+    }
+    ::-webkit-scrollbar { display: none; }
+  </style>
+<link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500;600;700&amp;family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "canvas": "#EEF3F7",
+            "sky-top": "#C3D6E6",
+            "sky-mid": "#DCE8F0",
+            "peach-glow": "#F6EAE2",
+            "ink-950": "#0E0F11",
+            "ink-800": "#1C2733",
+            "text-secondary": "#5F6873",
+            "text-disabled": "#8B94A0",
+            "slate-100": "#E8EDF2",
+            "slate-400": "#8296A8",
+            "slate-500": "#5E7384",
+            "slate-700": "#4B5B6A",
+            "dotted-border": "#B8C4CE",
+            "teal-100": "#DCEEF3",
+            "teal-500": "#3E9AB0",
+            "teal-600": "#2B7F94",
+            "teal-700": "#1F6F84",
+            "amber-100": "#FCEFD4",
+            "amber-500": "#F0A020",
+            "amber-700": "#8A5200",
+            "red-500": "#EF5B4B",
+            "surface": "#FFFFFF"
+          },
+          borderRadius: {
+            "DEFAULT": "0.25rem",
+            "lg": "0.5rem",
+            "xl": "0.75rem",
+            "2xl": "1.25rem",
+            "full": "9999px"
+          },
+          spacing: {
+            "gutter": "1rem",
+            "space-xs": "0.25rem",
+            "space-sm": "0.5rem",
+            "space-md": "1rem",
+            "space-lg": "1.5rem"
+          },
+          fontFamily: {
+            sans: ["'Inter Tight'", "Inter", "sans-serif"],
+            display: ["'Inter Tight'", "sans-serif"]
+          }
+        }
+      }
+    };
+  </script>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+      font-family: 'Inter Tight', Inter, sans-serif;
+    }
+  </style>
+</head>
+<body class="bg-canvas text-ink-950 antialiased flex flex-col min-h-screen relative selection:bg-teal-100 selection:text-teal-700">
+<!-- Ambient Sky Gradient & Peach Glow Accent -->
+<div class="fixed inset-0 pointer-events-none z-0">
+<div class="absolute top-0 left-0 right-0 h-96 bg-gradient-to-b from-sky-top via-sky-mid/60 to-transparent"></div>
+<div class="absolute -top-12 -right-12 w-64 h-64 rounded-full bg-peach-glow/70 blur-3xl"></div>
+<div class="absolute top-44 -left-16 w-52 h-52 rounded-full bg-teal-100/40 blur-3xl"></div>
+</div>
+<!-- iOS Status Bar & Clean Header -->
+<header class="sticky top-0 w-full z-40 pt-safe bg-surface/40 backdrop-blur-xl border-b border-white/40">
+<div class="px-gutter pt-1 pb-3 flex flex-col gap-2">
+<!-- Status bar simulation -->
+<div class="flex items-center justify-between text-ink-800 text-[13px] font-semibold tracking-tight px-1 pt-1">
+<span>9:41</span>
+<div class="flex items-center gap-1.5 text-ink-800">
+<span class="material-symbols-outlined text-[16px]">signal_cellular_alt</span>
+<span class="material-symbols-outlined text-[16px]">wifi</span>
+<span class="material-symbols-outlined text-[18px]">battery_full</span>
+</div>
+</div>
+<!-- Top Header Row: User Greeting, Role Switcher, Notification -->
+<div class="flex items-center justify-between pt-1">
+<div class="flex items-center gap-2.5">
+<div class="relative w-10 h-10 rounded-full overflow-hidden ring-2 ring-white/80 shadow-sm shrink-0 bg-teal-100 flex items-center justify-center">
+<img class="w-full h-full object-cover" data-alt="Editorial close-up portrait of a smiling young client named Alver wearing a clean fresh white linen shirt bathed in soft morning daylight with gentle teal undertones." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBma1Nn8rE9A0UL7OxXIcQhcgK87qYD26Dptk-Rod2t33gJwrzms3s05X-bARJ1e0sAyirIfC8k3lA35cXJfTyPTfdfmuzO9wzDXMNwc_wiT5h59CizJv6pXvMVsEr5JJyb-zR7KKYDbfcdb0oCKsNcaEC_2WW6AafWq9bF_RQhEw2A39dnu83usbmx1juF32UAYi0YkMTJhxSDXYoxtaA3DNWW37razu3UiSAEiLwa"/>
+</div>
+<div class="flex flex-col">
+<span class="text-[12px] text-text-secondary leading-none">Good morning,</span>
+<span class="text-[17px] font-semibold text-ink-950 tracking-tight leading-snug">Alver</span>
+</div>
+</div>
+<div class="flex items-center gap-2">
+<!-- Role switch selector -->
+<button aria-label="Switch customer profile" class="inline-flex items-center gap-1 px-3 py-1.5 rounded-full bg-surface/80 backdrop-blur-md shadow-xs border border-white/60 text-ink-950 active:scale-95 transition-transform" id="roleChipBtn" type="button">
+<span class="text-[12px] font-semibold">Customer A</span>
+<span class="material-symbols-outlined text-[16px] text-text-secondary">arrow_drop_down</span>
+</button>
+<!-- Notification Bell with Alert Dot -->
+<button aria-label="View notifications" class="relative w-9 h-9 rounded-full bg-surface/80 backdrop-blur-md border border-white/60 shadow-xs flex items-center justify-center text-ink-950 active:scale-95 transition-transform" type="button">
+<span class="material-symbols-outlined text-[19px]">notifications</span>
+<span class="absolute top-2 right-2 w-2 h-2 rounded-full bg-red-500 ring-2 ring-surface"></span>
+</button>
+</div>
+</div>
+</div>
+</header>
+<!-- Main Scroll Content -->
+<main class="flex-1 flex flex-col relative w-full px-gutter pt-3 pb-32 z-10 space-y-4">
+<!-- Signature Editorial Two-Tone Display Title -->
+<div class="pt-1 pb-1">
+<h1 class="text-[27px] leading-[33px] font-bold tracking-tight text-ink-950">
+        Your laundry, <br/>
+<span class="text-teal-700 font-semibold">handled with care.</span>
+</h1>
+</div>
+<!-- Active Order Spotlight: Large Frosted Glass Card -->
+<section class="relative overflow-hidden rounded-2xl bg-surface/80 backdrop-blur-xl border border-white/70 shadow-[0_8px_24px_rgba(28,39,51,0.06)] p-4">
+<!-- Glow ambient in card -->
+<div class="absolute -top-12 -right-12 w-32 h-32 rounded-full bg-teal-100/60 blur-xl pointer-events-none"></div>
+<!-- Top Row: Order Tag & Solid Teal Ready Badge -->
+<div class="flex items-start justify-between gap-2 relative z-10">
+<div>
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-teal-600 text-[18px]">local_laundry_service</span>
+<span class="text-[17px] font-bold text-ink-950 tracking-tight">LDR-0042</span>
+</div>
+<p class="text-[12px] text-text-secondary mt-0.5 font-medium">Express Service • Est. 6 h</p>
+</div>
+<!-- Solid Teal Ready Badge -->
+<div class="inline-flex items-center gap-1 px-3 py-1 rounded-full bg-teal-600 text-surface shadow-xs">
+<span class="material-symbols-outlined text-[14px]">check_circle</span>
+<span class="text-[11px] font-semibold uppercase tracking-wider">Ready</span>
+</div>
+</div>
+<!-- Perforated separator mimic -->
+<div class="my-3.5 border-b border-dashed border-dotted-border/70"></div>
+<!-- Compact Timeline Dots with Connecting Dotted Lines -->
+<div class="py-1 relative z-10">
+<div class="flex items-center justify-between text-center relative">
+<!-- Connecting Dotted Line -->
+<div class="absolute top-[10px] left-3 right-3 h-[2px] border-t-2 border-dotted border-dotted-border -z-0"></div>
+<!-- Completed Line Overlay -->
+<div class="absolute top-[10px] left-3 w-3/4 h-[2px] bg-teal-600 -z-0"></div>
+<!-- Step 1: Ordered -->
+<div class="flex flex-col items-center z-10">
+<div class="w-5 h-5 rounded-full bg-teal-600 text-surface flex items-center justify-center">
+<span class="material-symbols-outlined text-[12px]">check</span>
+</div>
+<span class="text-[11px] text-text-secondary mt-1 font-medium">Ordered</span>
+</div>
+<!-- Step 2: Received -->
+<div class="flex flex-col items-center z-10">
+<div class="w-5 h-5 rounded-full bg-teal-600 text-surface flex items-center justify-center">
+<span class="material-symbols-outlined text-[12px]">check</span>
+</div>
+<span class="text-[11px] text-text-secondary mt-1 font-medium">Received</span>
+</div>
+<!-- Step 3: Processing -->
+<div class="flex flex-col items-center z-10">
+<div class="w-5 h-5 rounded-full bg-teal-600 text-surface flex items-center justify-center">
+<span class="material-symbols-outlined text-[12px]">check</span>
+</div>
+<span class="text-[11px] text-text-secondary mt-1 font-medium">Processing</span>
+</div>
+<!-- Step 4: Ready (Current Active) -->
+<div class="flex flex-col items-center z-10">
+<div class="w-5 h-5 rounded-full bg-teal-600 text-surface flex items-center justify-center ring-4 ring-teal-100 shadow-xs">
+<span class="w-1.5 h-1.5 rounded-full bg-surface"></span>
+</div>
+<span class="text-[11px] text-teal-700 font-bold mt-1">Ready</span>
+</div>
+<!-- Step 5: Picked up -->
+<div class="flex flex-col items-center z-10 opacity-50">
+<div class="w-5 h-5 rounded-full bg-surface border border-slate-400 text-slate-400 flex items-center justify-center">
+<span class="w-1.5 h-1.5 rounded-full bg-slate-400"></span>
+</div>
+<span class="text-[11px] text-text-secondary mt-1 font-medium">Picked up</span>
+</div>
+</div>
+</div>
+<!-- Quick Action Micro-Tag Banner -->
+<div class="mt-3.5 pt-2.5 border-t border-slate-100 flex items-center justify-between">
+<div class="inline-flex items-center gap-1.5 text-teal-700 text-[12px] font-semibold bg-teal-100/70 px-2.5 py-1 rounded-md">
+<span class="material-symbols-outlined text-[15px]">storefront</span>
+<span>Pick up at counter</span>
+</div>
+<span class="text-[12px] text-text-secondary font-medium">Bay #04</span>
+</div>
+</section>
+<!-- Loyalty Stamp Widget: Horizontal Glass Bar with 10 Stamp Indicators -->
+<section class="rounded-2xl bg-surface/80 backdrop-blur-xl border border-white/70 shadow-[0_4px_16px_rgba(28,39,51,0.04)] p-4">
+<div class="flex items-center justify-between mb-2.5">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-ink-950 text-[18px]">verified</span>
+<span class="text-[13px] font-bold text-ink-950 uppercase tracking-wide">Loyalty card</span>
+</div>
+<span class="text-[12px] font-bold tabular-nums text-teal-700">7 / 10</span>
+</div>
+<!-- 10 Horizontal Stamp Circular Indicators -->
+<div class="grid grid-cols-10 gap-1.5 py-1 items-center">
+<!-- 7 Filled ink-950 droplets -->
+<div class="h-7 rounded-full bg-ink-950 text-surface flex items-center justify-center shadow-xs">
+<span class="material-symbols-outlined text-[14px]">water_drop</span>
+</div>
+<div class="h-7 rounded-full bg-ink-950 text-surface flex items-center justify-center shadow-xs">
+<span class="material-symbols-outlined text-[14px]">water_drop</span>
+</div>
+<div class="h-7 rounded-full bg-ink-950 text-surface flex items-center justify-center shadow-xs">
+<span class="material-symbols-outlined text-[14px]">water_drop</span>
+</div>
+<div class="h-7 rounded-full bg-ink-950 text-surface flex items-center justify-center shadow-xs">
+<span class="material-symbols-outlined text-[14px]">water_drop</span>
+</div>
+<div class="h-7 rounded-full bg-ink-950 text-surface flex items-center justify-center shadow-xs">
+<span class="material-symbols-outlined text-[14px]">water_drop</span>
+</div>
+<div class="h-7 rounded-full bg-ink-950 text-surface flex items-center justify-center shadow-xs">
+<span class="material-symbols-outlined text-[14px]">water_drop</span>
+</div>
+<div class="h-7 rounded-full bg-ink-950 text-surface flex items-center justify-center shadow-xs">
+<span class="material-symbols-outlined text-[14px]">water_drop</span>
+</div>
+<!-- 2 Dashed Empty -->
+<div class="h-7 rounded-full border-2 border-dashed border-dotted-border bg-white/40 flex items-center justify-center">
+<span class="w-1.5 h-1.5 rounded-full bg-slate-400"></span>
+</div>
+<div class="h-7 rounded-full border-2 border-dashed border-dotted-border bg-white/40 flex items-center justify-center">
+<span class="w-1.5 h-1.5 rounded-full bg-slate-400"></span>
+</div>
+<!-- 10th Stamp: Amber-500 Gift Icon -->
+<div class="h-7 rounded-full bg-amber-100 text-amber-500 border border-amber-500/40 flex items-center justify-center shadow-xs">
+<span class="material-symbols-outlined text-[16px]">featured_seasonal_and_gifts</span>
+</div>
+</div>
+<!-- Caption -->
+<p class="text-[12px] text-text-secondary mt-2.5 font-medium">
+        3 more orders to unlock <span class="text-ink-950 font-semibold">50% off</span>
+</p>
+</section>
+<!-- Services Selection Grid (STRICT RULE: unit prices only, plain tabular decimals) -->
+<section class="space-y-2.5">
+<div class="flex items-center justify-between px-0.5">
+<h2 class="text-[17px] font-bold text-ink-950">Services</h2>
+<span class="text-[12px] text-text-secondary font-medium">Standard unit rates</span>
+</div>
+<!-- 2-Column Grid: Express & Normal -->
+<div class="grid grid-cols-2 gap-2.5">
+<!-- Express Service Card -->
+<div class="rounded-2xl bg-surface/80 backdrop-blur-xl border border-white/70 p-3.5 flex flex-col justify-between min-h-[128px] shadow-[0_4px_16px_rgba(28,39,51,0.04)] relative overflow-hidden active:scale-[0.98] transition-transform cursor-pointer">
+<!-- Top Row: Name and Corner Tag with Icon -->
+<div class="flex items-start justify-between">
+<span class="text-[15px] font-semibold text-ink-950">Express</span>
+<div class="w-8 h-8 rounded-xl bg-teal-100 text-teal-700 flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[18px]">bolt</span>
+</div>
+</div>
+<!-- Bottom Row: Plain Unit Price -->
+<div>
+<div class="text-[20px] font-bold text-ink-950 tracking-tight tabular-nums leading-none">
+              2.00 <span class="text-[12px] text-text-secondary font-normal">/ kg</span>
+</div>
+<span class="text-[11px] text-teal-700 font-semibold mt-1 inline-block">Est. 6 h</span>
+</div>
+</div>
+<!-- Normal Service Card -->
+<div class="rounded-2xl bg-surface/80 backdrop-blur-xl border border-white/70 p-3.5 flex flex-col justify-between min-h-[128px] shadow-[0_4px_16px_rgba(28,39,51,0.04)] relative overflow-hidden active:scale-[0.98] transition-transform cursor-pointer">
+<!-- Top Row: Name and Corner Tag with Icon -->
+<div class="flex items-start justify-between">
+<span class="text-[15px] font-semibold text-ink-950">Normal</span>
+<div class="w-8 h-8 rounded-xl bg-sky-mid text-teal-700 flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[18px]">water_drop</span>
+</div>
+</div>
+<!-- Bottom Row: Plain Unit Price -->
+<div>
+<div class="text-[20px] font-bold text-ink-950 tracking-tight tabular-nums leading-none">
+              1.00 <span class="text-[12px] text-text-secondary font-normal">/ kg</span>
+</div>
+<span class="text-[11px] text-slate-500 font-medium mt-1 inline-block">48 h turn</span>
+</div>
+</div>
+</div>
+<!-- Full-Width Card: Bedding -->
+<div class="rounded-2xl bg-surface/80 backdrop-blur-xl border border-white/70 p-3.5 flex items-center justify-between shadow-[0_4px_16px_rgba(28,39,51,0.04)] active:scale-[0.99] transition-transform cursor-pointer">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-xl bg-teal-100 text-teal-700 flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[20px]">bed</span>
+</div>
+<div class="flex flex-col">
+<div class="flex items-center gap-1.5">
+<span class="text-[15px] font-semibold text-ink-950">Bedding</span>
+<span class="text-[10px] uppercase font-semibold text-slate-500 bg-slate-100 px-1.5 py-0.5 rounded">72 h</span>
+</div>
+<span class="text-[12px] text-text-secondary">Duvets, sheets, pillowcases</span>
+</div>
+</div>
+<div class="text-right">
+<div class="text-[20px] font-bold text-ink-950 tracking-tight tabular-nums leading-none">
+            5.00 <span class="text-[12px] text-text-secondary font-normal">/ item</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Sticky Primary Action Button: 52px black primary button with trailing arrow -->
+<div class="pt-1">
+<button class="w-full h-[52px] rounded-xl bg-ink-950 hover:bg-ink-800 text-surface flex items-center justify-between px-5 shadow-lg active:scale-[0.99] transition-all" id="newOrderAction" type="button">
+<span class="text-[15px] font-semibold tracking-normal">New order</span>
+<span class="material-symbols-outlined text-[20px] text-surface transition-transform duration-200">north_east</span>
+</button>
+</div>
+</main>
+<!-- Floating Bottom Glass Navigation Bar with Rounded Pill Active State -->
+<div class="fixed bottom-0 w-full z-50 pb-safe pointer-events-none px-gutter">
+<nav class="pointer-events-auto mx-auto mb-2 max-w-[358px] h-14 rounded-full bg-surface/75 backdrop-blur-xl border border-white/60 shadow-[0_12px_32px_rgba(28,39,51,0.12)] p-1 flex items-center justify-between">
+<!-- Home (Active Pill) -->
+<a aria-current="page" class="flex items-center gap-1.5 px-4 py-2 rounded-full transition-all shrink-0 min-h-[40px] justify-center bg-ink-950 text-surface shadow-xs" data-path="home" href="#">
+<span class="material-symbols-outlined text-[19px]">home</span>
+<span class="text-[12px] font-semibold">Home</span>
+</a>
+<!-- Orders -->
+<a class="flex items-center gap-1.5 px-3 py-2 rounded-full text-text-secondary hover:text-ink-950 transition-all shrink-0 min-h-[40px] justify-center" data-path="orders" href="#">
+<span class="material-symbols-outlined text-[19px]">local_laundry_service</span>
+<span class="text-[12px] font-medium">Orders</span>
+</a>
+<!-- Rewards -->
+<a class="flex items-center gap-1.5 px-3 py-2 rounded-full text-text-secondary hover:text-ink-950 transition-all shrink-0 min-h-[40px] justify-center" data-path="rewards" href="#">
+<span class="material-symbols-outlined text-[19px]">stars</span>
+<span class="text-[12px] font-medium">Rewards</span>
+</a>
+<!-- Alerts -->
+<a class="flex items-center gap-1.5 px-3 py-2 rounded-full text-text-secondary hover:text-ink-950 transition-all shrink-0 min-h-[40px] justify-center" data-path="alerts" href="#">
+<span class="material-symbols-outlined text-[19px]">notifications</span>
+<span class="text-[12px] font-medium">Alerts</span>
+</a>
+</nav>
+</div>
+<script>
+    (function() {
+      // Role Switch interactive micro-toggle
+      const roleBtn = document.getElementById('roleChipBtn');
+      if (roleBtn) {
+        const roles = ['Customer A', 'Customer B (Family)', 'Guest View'];
+        let idx = 0;
+        roleBtn.addEventListener('click', () => {
+          idx = (idx + 1) % roles.length;
+          const textSpan = roleBtn.querySelector('span:first-child');
+          if (textSpan) {
+            textSpan.textContent = roles[idx];
+          }
+        });
+      }
+
+      // New Order micro-interaction
+      const newOrderBtn = document.getElementById('newOrderAction');
+      if (newOrderBtn) {
+        newOrderBtn.addEventListener('click', () => {
+          const arrow = newOrderBtn.querySelector('.material-symbols-outlined');
+          if (arrow) {
+            arrow.style.transform = 'translate(2px, -2px)';
+            setTimeout(() => {
+              arrow.style.transform = 'translate(0, 0)';
+            }, 180);
+          }
+        });
+      }
+    })();
+  </script>
+</body></html>

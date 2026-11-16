@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#dfedf6">
+  <meta name="description" content="Shop settings — Washday laundry shop.">
+  <title>Shop settings · Washday</title>
+  <link rel="icon" href="../assets/images/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="../assets/css/tokens.css">
+  <link rel="stylesheet" href="../assets/css/base.css">
+  <link rel="stylesheet" href="../assets/css/review-pages.css">
+</head>
+<body class="rp-page" data-role="owner">
+  <div class="ambient" aria-hidden="true"></div>
+  <header class="topbar">
+    <div class="account-row">
+      <a class="brand-lockup" href="owner-home.html" aria-label="Washday home">
+        <span class="brand-mark" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 3.2c2.9 3.7 5.6 7 5.6 10.2a5.6 5.6 0 1 1-11.2 0c0-3.2 2.7-6.5 5.6-10.2Z" fill="currentColor"/><path d="M9.4 13.3c.2 1.6 1.3 2.6 2.8 2.8" fill="none" stroke="#0e1115" stroke-width="1.5" stroke-linecap="round"/></svg></span>
+        <span class="brand-wordmark">Washday<svg class="brand-spark" viewBox="0 0 12 12" aria-hidden="true"><path d="M6 .6 7 5l4.4 1L7 7 6 11.4 5 7 .6 6 5 5Z" fill="currentColor"/></svg></span>
+      </a>
+      <div class="header-actions"><a class="profile-switch" href="login.html" aria-label="Current profile: Owner; switch account"><span class="avatar avatar-sm role-avatar" aria-hidden="true">O</span><span class="profile-name">Owner</span><svg viewBox="0 0 16 16" aria-hidden="true"><path d="m4 6 4 4 4-4"/></svg></a></div>
+    </div>
+  </header>
+  <main class="rp-main">
+    <header class="rp-page-heading"><h1>Shop settings</h1><p>Loyalty and order timing rules.</p></header>
+    
+<section class="rp-card"><p class="rp-kicker">OWNER</p><h2>Loyalty rules</h2><label class="rp-label" for="stamp-threshold">Completed orders per reward</label><input class="rp-input" id="stamp-threshold" type="number" value="10" min="1"><p class="rp-help">Changing this threshold would affect every customer's balance.</p><label class="rp-label" for="loyalty-percent">Reward discount</label><input class="rp-input" id="loyalty-percent" type="number" value="50" min="0" max="100"><label class="rp-label" for="weight-cap">Weight cap (kg)</label><input class="rp-input" id="weight-cap" type="number" value="5" min="0"></section>
+<section class="rp-card"><h2>Order timing</h2><label class="rp-label" for="order-expiry">Ordered expiry window (hours)</label><input class="rp-input" id="order-expiry" type="number" value="48" min="1"><label class="rp-label" for="pickup-reminder">Ready pickup reminder (days)</label><input class="rp-input" id="pickup-reminder" type="number" value="3" min="1"><label class="rp-label" for="unclaimed-days">Unclaimed policy period (days)</label><input class="rp-input" id="unclaimed-days" type="number" value="30" min="1"><button class="rp-button rp-button-primary rp-full" type="button" data-action="save-settings">Save settings</button><p class="rp-feedback" data-feedback aria-live="polite"></p></section>
+<div class="rp-notice"><strong>Shop policy</strong><p>These values apply to new orders, pickup reminders and unclaimed items.</p></div>
+  </main>
+  
+  <nav class="bottom-nav" aria-label="Owner navigation"><a class="nav-item" href="owner-home.html"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m3 10 9-7 9 7M5 9v12h14V9M9 21v-7h6v7"/></svg><span>Home</span></a><a class="nav-item" href="services-and-prices.html"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m8 4 4 2 4-2 5 3-2 4-3-1v10H8V10l-3 1-2-4 5-3Z"/><path d="M9 5.5c.5 1.6 1.5 2.5 3 2.5s2.5-.9 3-2.5"/></svg><span>Services</span></a><a class="nav-item" href="vouchers.html"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16v13H4zM4 10h16M8 4v6m8-6v6M8 14h3m2 0h3m-8 3h3m2 0h3"/></svg><span>Vouchers</span></a><a class="nav-item active" href="owner-more.html" aria-current="page"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="5" cy="12" r="1"/><circle cx="12" cy="12" r="1"/><circle cx="19" cy="12" r="1"/></svg><span>More</span></a></nav>
+  <script src="../assets/js/review-pages.js"></script>
+</body>
+</html>

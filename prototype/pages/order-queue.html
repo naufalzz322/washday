@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#dfedf6">
+  <meta name="description" content="Order queue — Washday laundry shop.">
+  <title>Order queue · Washday</title>
+  <link rel="icon" href="../assets/images/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="../assets/css/tokens.css">
+  <link rel="stylesheet" href="../assets/css/base.css">
+  <link rel="stylesheet" href="../assets/css/review-pages.css">
+</head>
+<body class="rp-page" data-role="clerk">
+  <div class="ambient" aria-hidden="true"></div>
+  <header class="topbar">
+    <div class="account-row">
+      <a class="brand-lockup" href="clerk-home.html" aria-label="Washday home">
+        <span class="brand-mark" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 3.2c2.9 3.7 5.6 7 5.6 10.2a5.6 5.6 0 1 1-11.2 0c0-3.2 2.7-6.5 5.6-10.2Z" fill="currentColor"/><path d="M9.4 13.3c.2 1.6 1.3 2.6 2.8 2.8" fill="none" stroke="#0e1115" stroke-width="1.5" stroke-linecap="round"/></svg></span>
+        <span class="brand-wordmark">Washday<svg class="brand-spark" viewBox="0 0 12 12" aria-hidden="true"><path d="M6 .6 7 5l4.4 1L7 7 6 11.4 5 7 .6 6 5 5Z" fill="currentColor"/></svg></span>
+      </a>
+      <div class="header-actions"><a class="profile-switch" href="login.html" aria-label="Current profile: Clerk; switch account"><span class="avatar avatar-sm role-avatar" aria-hidden="true">K</span><span class="profile-name">Clerk</span><svg viewBox="0 0 16 16" aria-hidden="true"><path d="m4 6 4 4 4-4"/></svg></a></div>
+    </div>
+  </header>
+  <main class="rp-main">
+    <header class="rp-page-heading"><h1>Order queue</h1><p>Find an order and see where it is.</p></header>
+    
+<section class="rp-card"><label class="rp-label" for="queue-search">Search orders</label><div class="rp-search"><input id="queue-search" type="search" data-order-search placeholder="Try LDR-0042" aria-label="Search orders"><button class="rp-button rp-button-secondary" type="button" data-action="queue-search">Search</button></div><p class="rp-help">Search by order ID, customer or service.</p></section>
+<section class="rp-card"><div class="rp-section-head"><div><p class="rp-kicker">CLERK</p><h2>Orders</h2></div><span class="rp-count">6 open</span></div><div class="rp-filter-row" role="group" aria-label="Filter queue" data-order-filters><button type="button" class="rp-filter is-selected" data-filter="all">All</button><button type="button" class="rp-filter" data-filter="ready">Ready</button><button type="button" class="rp-filter" data-filter="processing">Processing</button></div>
+<a class="rp-list-row" data-order-row data-status="ready" href="staff-order-detail.html"><span class="rp-service-icon" aria-hidden="true">E</span><span class="rp-row-main"><strong>LDR-0042</strong><small>Customer A · Express wash</small></span><span class="rp-status rp-status-warning">Ready</span><span class="rp-chevron" aria-hidden="true">›</span></a>
+<a class="rp-list-row" data-order-row data-status="processing" href="staff-order-detail.html"><span class="rp-service-icon" aria-hidden="true">W</span><span class="rp-row-main"><strong>LDR-0041</strong><small>Customer B · Wash &amp; fold</small></span><span class="rp-status rp-status-neutral">Processing</span><span class="rp-chevron" aria-hidden="true">›</span></a>
+<a class="rp-list-row" data-order-row data-status="ready" href="staff-order-detail.html"><span class="rp-service-icon" aria-hidden="true">B</span><span class="rp-row-main"><strong>LDR-0040</strong><small>Walk-in · Bedding wash &amp; fold</small></span><span class="rp-status rp-status-warning">Ready</span><span class="rp-chevron" aria-hidden="true">›</span></a>
+<a class="rp-list-row" data-order-row data-status="ready" href="staff-order-detail.html"><span class="rp-service-icon" aria-hidden="true">P</span><span class="rp-row-main"><strong>LDR-0039</strong><small>Customer A · Press only</small></span><span class="rp-status rp-status-warning">Ready</span><span class="rp-chevron" aria-hidden="true">›</span></a>
+<a class="rp-list-row" data-order-row data-status="processing" href="staff-order-detail.html"><span class="rp-service-icon" aria-hidden="true">D</span><span class="rp-row-main"><strong>LDR-0038</strong><small>Customer B · Dry clean</small></span><span class="rp-status rp-status-neutral">Processing</span><span class="rp-chevron" aria-hidden="true">›</span></a>
+<a class="rp-list-row" data-order-row data-status="ready" href="staff-order-detail.html"><span class="rp-service-icon" aria-hidden="true">E</span><span class="rp-row-main"><strong>LDR-0037</strong><small>Customer A · Express wash</small></span><span class="rp-status rp-status-warning">Ready</span><span class="rp-chevron" aria-hidden="true">›</span></a>
+<p class="rp-empty" data-order-empty hidden>No orders match this search.</p></section>
+<div class="rp-actions"><a class="rp-button rp-button-primary" href="weigh-and-confirm.html">Weigh an order</a><a class="rp-button rp-button-secondary" href="new-order-for-customer.html">Counter order</a></div>
+
+  </main>
+  
+  <nav class="bottom-nav" aria-label="Clerk navigation"><a class="nav-item" href="clerk-home.html"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m3 10 9-7 9 7M5 9v12h14V9M9 21v-7h6v7"/></svg><span>Home</span></a><a class="nav-item active" href="order-queue.html" aria-current="page"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 3h14a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2Zm-2 5h18M7 5.5h.01M10 5.5h.01"/><circle cx="12" cy="14" r="4"/></svg><span>Queue</span></a><a class="nav-item" href="new-order-for-customer.html"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="9" cy="7" r="3"/><path d="M3 19a6 6 0 0 1 12 0M19 8v8m-4-4h8"/></svg><span>New order</span></a></nav>
+  <script src="../assets/js/review-pages.js"></script>
+</body>
+</html>

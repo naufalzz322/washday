@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#dfedf6">
+  <meta name="description" content="Home — Washday laundry shop.">
+  <title>Home · Washday</title>
+  <link rel="icon" href="../assets/images/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="../assets/css/tokens.css">
+  <link rel="stylesheet" href="../assets/css/base.css">
+  <link rel="stylesheet" href="../assets/css/review-pages.css">
+  <link rel="stylesheet" href="../assets/css/dashboard.css">
+</head>
+<body class="rp-page" data-role="clerk" data-dashboard="clerk">
+  <div class="ambient" aria-hidden="true"></div>
+  <header class="topbar">
+    <div class="account-row">
+      <a class="brand-lockup" href="clerk-home.html" aria-label="Washday home">
+        <span class="brand-mark" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 3.2c2.9 3.7 5.6 7 5.6 10.2a5.6 5.6 0 1 1-11.2 0c0-3.2 2.7-6.5 5.6-10.2Z" fill="currentColor"/><path d="M9.4 13.3c.2 1.6 1.3 2.6 2.8 2.8" fill="none" stroke="#0e1115" stroke-width="1.5" stroke-linecap="round"/></svg></span>
+        <span class="brand-wordmark">Washday<svg class="brand-spark" viewBox="0 0 12 12" aria-hidden="true"><path d="M6 .6 7 5l4.4 1L7 7 6 11.4 5 7 .6 6 5 5Z" fill="currentColor"/></svg></span>
+      </a>
+      <div class="header-actions"><a class="profile-switch" href="login.html" aria-label="Current profile: Clerk; switch account"><span class="avatar avatar-sm role-avatar" aria-hidden="true">K</span><span class="profile-name">Clerk</span><svg viewBox="0 0 16 16" aria-hidden="true"><path d="m4 6 4 4 4-4"/></svg></a></div>
+    </div>
+  </header>
+  <main class="rp-main">
+    <header class="rp-page-heading"><h1>Home</h1><p>Today&#x27;s queue and shop snapshot.</p></header>
+    
+<section class="dash-hero" aria-labelledby="clerk-hero-title">
+  <div class="dash-hero-top"><div><p class="rp-kicker">CLERK · TODAY</p><h2 id="clerk-hero-title">Counter shift</h2></div></div>
+  <p>Orders, pickups and payments in one place.</p>
+  <div class="dash-hero-actions"><a class="rp-button rp-button-primary" href="order-queue.html">Open queue</a><a class="rp-button rp-button-secondary" href="new-order-for-customer.html">Counter order</a></div>
+</section>
+<section class="rp-card" aria-labelledby="clerk-kpi-title">
+  <div class="rp-section-head"><div><p class="rp-kicker">TODAY</p><h2 id="clerk-kpi-title">Today at a glance</h2></div><span class="rp-count">Updated just now</span></div>
+  <div class="dash-kpis" data-dashboard-metrics></div>
+</section>
+<section class="rp-card" aria-labelledby="clerk-work-title">
+  <div class="rp-section-head"><div><p class="rp-kicker">OPERATIONS</p><h2 id="clerk-work-title">Queue load</h2></div><span class="rp-count">6 open</span></div>
+  <div class="dash-bars" data-dashboard-queue></div>
+</section>
+<section class="rp-card" aria-labelledby="clerk-recent-title">
+  <div class="rp-section-head"><div><p class="rp-kicker">RECENT</p><h2 id="clerk-recent-title">Recent orders</h2></div><a class="rp-text-link" href="order-queue.html">View all</a></div>
+  <div class="dash-orders" data-dashboard-orders></div>
+</section>
+
+  </main>
+  
+  <nav class="bottom-nav" aria-label="Clerk navigation"><a class="nav-item active" href="clerk-home.html" aria-current="page"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m3 10 9-7 9 7M5 9v12h14V9M9 21v-7h6v7"/></svg><span>Home</span></a><a class="nav-item" href="order-queue.html"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 3h14a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2Zm-2 5h18M7 5.5h.01M10 5.5h.01"/><circle cx="12" cy="14" r="4"/></svg><span>Queue</span></a><a class="nav-item" href="new-order-for-customer.html"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="9" cy="7" r="3"/><path d="M3 19a6 6 0 0 1 12 0M19 8v8m-4-4h8"/></svg><span>New order</span></a></nav>
+  <script src="../assets/js/dashboard-data.js"></script>
+  <script src="../assets/js/dashboard.js"></script>
+</body>
+</html>

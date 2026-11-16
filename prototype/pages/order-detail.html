@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#dfedf6">
+  <meta name="description" content="Order detail — Washday laundry shop.">
+  <title>Order detail · Washday</title>
+  <link rel="icon" href="../assets/images/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="../assets/css/tokens.css">
+  <link rel="stylesheet" href="../assets/css/base.css">
+  <link rel="stylesheet" href="../assets/css/review-pages.css">
+  <link rel="stylesheet" href="../assets/css/order-detail.css">
+</head>
+<body class="rp-page" data-role="customer">
+  <div class="ambient" aria-hidden="true"></div>
+  <header class="topbar">
+    <div class="account-row">
+      <a class="brand-lockup" href="customer-home.html" aria-label="Washday home">
+        <span class="brand-mark" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 3.2c2.9 3.7 5.6 7 5.6 10.2a5.6 5.6 0 1 1-11.2 0c0-3.2 2.7-6.5 5.6-10.2Z" fill="currentColor"/><path d="M9.4 13.3c.2 1.6 1.3 2.6 2.8 2.8" fill="none" stroke="#0e1115" stroke-width="1.5" stroke-linecap="round"/></svg></span>
+        <span class="brand-wordmark">Washday<svg class="brand-spark" viewBox="0 0 12 12" aria-hidden="true"><path d="M6 .6 7 5l4.4 1L7 7 6 11.4 5 7 .6 6 5 5Z" fill="currentColor"/></svg></span>
+      </a>
+      <div class="header-actions"><a class="profile-switch" href="login.html" aria-label="Current profile: Customer A; switch account"><img class="avatar avatar-sm" src="../assets/images/customer-alex.jpg" alt=""><span class="profile-name">Customer A</span><svg viewBox="0 0 16 16" aria-hidden="true"><path d="m4 6 4 4 4-4"/></svg></a><a class="bell-button" href="notifications.html" aria-label="Notifications, one unread"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M18 9a6 6 0 0 0-12 0c0 7-3 7-3 9h18c0-2-3-2-3-9M10 21h4"/></svg><span class="unread-dot" aria-hidden="true"></span></a></div>
+    </div>
+  </header>
+  <main class="rp-main">
+    
+    
+<a class="rp-back-link" href="order-history.html"><span aria-hidden="true">←</span> Orders</a>
+<section class="od-track-hero" aria-labelledby="order-title">
+  <div class="od-track-top"><p class="rp-kicker">Track order</p><span class="rp-status rp-status-warning">Ready</span></div>
+  <h1 id="order-title">LDR-0042</h1>
+  <p class="od-track-meta">Express service · Ready for pickup</p>
+  <div class="od-chips">
+    <span class="od-chip"><svg viewBox="0 0 20 20" aria-hidden="true"><circle cx="10" cy="10" r="7.2"/><path d="M10 6v4.3l2.8 1.6"/></svg>Est. 6 h</span>
+    <span class="od-chip"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M3.5 16.5h13M5 16.5l1.7-10h6.6l1.7 10M8.3 9.4l1.7 1.7 2.5-3.2"/></svg>2.00 / kg</span>
+  </div>
+</section>
+<section class="rp-card od-timeline-card">
+  <div class="rp-section-head"><div><p class="rp-kicker">Status</p><h2>Order progress</h2></div><span class="rp-count">Step 4 of 5</span></div>
+  <ol class="rp-timeline">
+    <li class="is-done"><span class="rp-step-node" aria-hidden="true"></span><div class="rp-step-copy"><strong>Ordered</strong><small>Order placed</small></div><span class="rp-step-state">Complete</span></li>
+    <li class="is-done"><span class="rp-step-node" aria-hidden="true"></span><div class="rp-step-copy"><strong>Received</strong><small>Drop-off recorded</small></div><span class="rp-step-state">Complete</span></li>
+    <li class="is-done"><span class="rp-step-node" aria-hidden="true"></span><div class="rp-step-copy"><strong>Processing</strong><small>Laundry processed</small></div><span class="rp-step-state">Complete</span></li>
+    <li class="is-current"><span class="rp-step-node" aria-hidden="true"></span><div class="rp-step-copy"><strong>Ready</strong><small>Ready for pickup</small></div><span class="rp-step-state">Current</span></li>
+    <li><span class="rp-step-node" aria-hidden="true"></span><div class="rp-step-copy"><strong>Picked up</strong><small>Not yet collected</small></div><span class="rp-step-state">Next</span></li>
+  </ol>
+</section>
+<section class="rp-card">
+  <div class="rp-section-head"><div><p class="rp-kicker">Price</p><h2>Unit rate</h2></div><span class="rp-status rp-status-warning">Not weighed</span></div>
+  <div class="od-price-line">
+    <span class="od-price-copy"><strong>Express service</strong><small>Price per kilogram</small></span>
+    <span class="od-price-amount">2.00 <small>/ kg</small></span>
+  </div>
+  <div class="od-dashed" aria-hidden="true"></div>
+  <p class="od-price-note">Your total is worked out when we weigh your laundry.</p>
+</section>
+<section class="od-pickup" aria-label="Pickup">
+  <span class="od-pickup-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4 10h16l-1.2 10H5.2L4 10ZM3 6h18v4H3zM9 6V4h6v2"/></svg></span>
+  <span class="od-pickup-copy"><strong>Pickup at the shop</strong><small>Bring your order ID when you collect it.</small></span>
+</section>
+<div class="rp-notice"><strong>Final price after weighing</strong><p>We’ll confirm the total once your bag is weighed. The unit rate is shown below.</p></div>
+<div class="rp-actions"><a class="rp-button rp-button-secondary" href="order-history.html">Order history</a><a class="rp-button rp-button-primary" href="notifications.html">Notifications <span aria-hidden="true">↗</span></a></div>
+  </main>
+  
+  <nav class="bottom-nav" aria-label="Customer navigation"><a class="nav-item" href="customer-home.html"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m3 10 9-7 9 7M5 9v12h14V9M9 21v-7h6v7"/></svg><span>Home</span></a><a class="nav-item active" href="order-history.html" aria-current="page"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 3h14a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2Zm-2 5h18M7 5.5h.01M10 5.5h.01"/><circle cx="12" cy="14" r="4"/></svg><span>Orders</span></a><a class="nav-item" href="customer-vouchers.html"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16v13H4zM4 10h16M8 4v6m8-6v6M8 14h3m2 0h3m-8 3h3m2 0h3"/></svg><span>Vouchers</span></a><a class="nav-item" href="customer-profile.html"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="8" r="4"/><path d="M4 21a8 8 0 0 1 16 0"/><path d="M18 4.5h3m-1.5-1.5v3"/></svg><span>Profile</span></a></nav>
+</body>
+</html>

@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><meta content="mobile_tab" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { colors: { "inverse-surface": "#26313e", "sky-mid": "#DCE8F0", "on-primary": "#ffffff", "surface-container-low": "#eef4ff", "on-tertiary-container": "#ffded9", "amber-500": "#F0A020", "on-secondary-fixed": "#2a1800", "tertiary-container": "#bb362a", "text-disabled": "#8B94A0", "dotted-border": "#B8C4CE", "on-tertiary": "#ffffff", "surface-bright": "#f8f9ff", "on-primary-container": "#bbedff", "red-500": "#EF5B4B", "primary": "#005669", "ink-800": "#1C2733", "secondary-fixed": "#ffddb6", "surface": "#FFFFFF", "error": "#ba1a1a", "sky-top": "#C3D6E6", "surface-container": "#e4efff", "slate-700": "#4B5B6A", "on-secondary": "#ffffff", "red-700": "#B3261E", "teal-700": "#1F6F84", "outline": "#6f797c", "surface-dim": "#d0dbeb", "tertiary-fixed-dim": "#ffb4a9", "on-surface": "#111c28", "on-surface-variant": "#3f484c", "slate-500": "#5E7384", "on-tertiary-fixed": "#410001", "slate-100": "#E8EDF2", "on-error-container": "#93000a", "red-100": "#FCE4E1", "secondary-container": "#fcaa2c", "canvas": "#EEF3F7", "teal-100": "#DCEEF3", "on-background": "#111c28", "text-secondary": "#5F6873", "surface-container-lowest": "#ffffff", "teal-500": "#3E9AB0", "on-secondary-fixed-variant": "#643f00", "red-600": "#C5332B", "teal-600": "#2B7F94", "secondary-fixed-dim": "#ffb95a", "inverse-primary": "#8ad1e8", "on-error": "#ffffff", "inverse-on-surface": "#e9f1ff", "outline-variant": "#bfc8cc", "tertiary": "#991c15", "surface-container-high": "#dee9fa", "peach-glow": "#F6EAE2", "primary-fixed": "#b3ebff", "surface-container-highest": "#d8e3f4", "background": "#f8f9ff", "on-primary-fixed": "#001f27", "slate-400": "#8296A8", "error-container": "#ffdad6", "on-tertiary-fixed-variant": "#8e130e", "surface-variant": "#d8e3f4", "amber-700": "#8A5200", "secondary": "#845400", "on-primary-fixed-variant": "#004e5f", "primary-container": "#1f6f84", "primary-fixed-dim": "#8ad1e8", "ink-950": "#0E0F11", "amber-100": "#FCEFD4", "on-secondary-container": "#6a4300", "tertiary-fixed": "#ffdad5", "surface-tint": "#11677c" }, borderRadius: { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, spacing: { "space-xl": "2.5rem", "space-md": "1rem", "margin": "1rem", "gutter": "1rem", "space-lg": "1.5rem", "space-sm": "0.5rem", "space-xs": "0.25rem" }, fontFamily: { "headline-md": ["Inter"], "headline-sm": ["Inter"], "body-sm": ["Inter"], "label-md": ["Inter"], "body-lg": ["Inter"], "headline-xl": ["Inter"], "body-md": ["Inter"], "headline-lg": ["Inter"], "label-lg": ["Inter"], "label-sm": ["Inter"] }, fontSize: { "headline-md": ["22px", { "lineHeight": "28px", "letterSpacing": "-0.01em", "fontWeight": "600" }], "headline-sm": ["18px", { "lineHeight": "24px", "fontWeight": "600" }], "body-sm": ["13px", { "lineHeight": "18px", "fontWeight": "400" }], "label-md": ["12px", { "lineHeight": "16px", "letterSpacing": "0.02em", "fontWeight": "600" }], "body-lg": ["16px", { "lineHeight": "24px", "fontWeight": "400" }], "headline-xl": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.02em", "fontWeight": "700" }], "body-md": ["14px", { "lineHeight": "20px", "fontWeight": "400" }], "headline-lg": ["26px", { "lineHeight": "34px", "letterSpacing": "-0.015em", "fontWeight": "700" }], "label-lg": ["14px", { "lineHeight": "20px", "fontWeight": "600" }], "label-sm": ["11px", { "lineHeight": "14px", "letterSpacing": "0.03em", "fontWeight": "500" }] } } } };</script><style>@layer base{html,body{width:100%;margin:0;padding:0;min-height:100vh;}body{overscroll-behavior:none;background:linear-gradient(180deg,#C3D6E6 0%,#DCE8F0 180px,#EEF3F7 360px,#EEF3F7 100%);background-attachment:fixed;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head><body class="min-h-screen text-on-surface flex flex-col antialiased selection:bg-teal-100 selection:text-teal-700"><header class="fixed top-0 w-full z-50 pt-safe bg-surface/70 backdrop-blur-xl shadow-[0_1px_8px_rgba(28,39,51,0.04)]"><div class="h-16 px-space-md flex items-center justify-between"><div class="flex items-center gap-space-sm"><h1 class="font-headline-sm text-headline-sm text-ink-800 tracking-tight">Summary</h1><span class="px-2 py-0.5 rounded-full bg-teal-100 text-teal-700 font-label-sm text-label-sm uppercase tracking-wider">Owner</span></div><div class="flex items-center gap-space-sm"><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="flex-1 flex flex-col relative w-full pt-16 pb-28 px-space-md bg-transparent"><div class="flex flex-col w-full gap-space-md">
+<!-- Live Shift & Date Context Ribbon -->
+<div class="flex items-center justify-between px-space-xs">
+<div class="flex flex-col min-w-0">
+<div class="flex items-center gap-1.5">
+<span class="inline-block w-2 h-2 rounded-full bg-teal-500 animate-pulse"></span>
+<span class="font-label-sm text-label-sm text-teal-700 font-semibold tracking-wide uppercase">Shift Live</span>
+<span class="text-slate-400 font-body-sm text-body-sm">•</span>
+<span class="font-label-sm text-label-sm text-text-secondary truncate">Station 01 &amp; 02</span>
+</div>
+<p class="font-headline-sm text-headline-sm text-ink-800 tracking-tight mt-0.5">Today, 18 May 2025</p>
+</div>
+<!-- Date Filter / Calendar Action Button -->
+<button aria-label="Change Date" class="flex items-center justify-center w-10 h-10 rounded-full bg-surface/80 backdrop-blur-md shadow-sm text-slate-700 active:scale-95 transition-transform" type="button">
+<span class="material-symbols-outlined text-[20px]">calendar_today</span>
+</button>
+</div>
+<!-- Primary Stat Cards (Trio Stack) -->
+<div class="flex flex-col gap-space-sm">
+<!-- Stat 1: Total Orders -->
+<div class="relative overflow-hidden rounded-2xl bg-surface/75 backdrop-blur-xl p-space-md shadow-sm">
+<div class="flex items-start justify-between">
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-text-secondary uppercase tracking-wider">Orders</span>
+<div class="flex items-baseline gap-2 mt-1">
+<span class="font-headline-xl text-headline-xl text-ink-800 tabular-nums">18</span>
+<span class="font-label-sm text-label-sm px-2 py-0.5 rounded-full bg-teal-100 text-teal-700 font-semibold">+24% vs yesterday</span>
+</div>
+</div>
+<div class="w-10 h-10 rounded-xl bg-teal-100/70 flex items-center justify-center text-teal-700">
+<span class="material-symbols-outlined text-[22px]">local_laundry_service</span>
+</div>
+</div>
+<div class="mt-3 pt-3 flex items-center justify-between text-slate-500 font-body-sm text-body-sm">
+<span class="flex items-center gap-1.5">
+<span class="w-1.5 h-1.5 rounded-full bg-teal-600"></span>
+          8 completed
+        </span>
+<span class="flex items-center gap-1.5">
+<span class="w-1.5 h-1.5 rounded-full bg-amber-500"></span>
+          10 in progress
+        </span>
+</div>
+</div>
+<!-- Stat 2: Daily Revenue -->
+<div class="relative overflow-hidden rounded-2xl bg-surface/75 backdrop-blur-xl p-space-md shadow-sm">
+<div class="flex items-start justify-between">
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-text-secondary uppercase tracking-wider">Revenue</span>
+<div class="flex items-baseline gap-2 mt-1">
+<span class="font-headline-xl text-headline-xl text-ink-800 tabular-nums">142.80</span>
+<span class="font-label-sm text-label-sm px-2 py-0.5 rounded-full bg-slate-100 text-slate-700 font-semibold">Cash &amp; QR split</span>
+</div>
+</div>
+<div class="w-10 h-10 rounded-xl bg-sky-top/50 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[22px]">payments</span>
+</div>
+</div>
+<div class="mt-3 pt-3 flex items-center justify-between text-slate-500 font-body-sm text-body-sm">
+<span class="flex items-center gap-1.5">
+<span class="w-1.5 h-1.5 rounded-full bg-primary"></span>
+          128.00 settled
+        </span>
+<span class="flex items-center gap-1.5">
+<span class="w-1.5 h-1.5 rounded-full bg-slate-400"></span>
+          14.80 pending
+        </span>
+</div>
+</div>
+<!-- Stat 3: Discounts Given -->
+<div class="relative overflow-hidden rounded-2xl bg-surface/75 backdrop-blur-xl p-space-md shadow-sm">
+<div class="flex items-start justify-between">
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-text-secondary uppercase tracking-wider">Discounts Given</span>
+<div class="flex items-baseline gap-2 mt-1">
+<span class="font-headline-xl text-headline-xl text-ink-800 tabular-nums">12.64</span>
+<span class="font-label-sm text-label-sm px-2 py-0.5 rounded-full bg-amber-100 text-amber-700 font-semibold">WELCOME10 top</span>
+</div>
+</div>
+<div class="w-10 h-10 rounded-xl bg-peach-glow flex items-center justify-center text-amber-700">
+<span class="material-symbols-outlined text-[22px]">redeem</span>
+</div>
+</div>
+<div class="mt-3 pt-3 flex items-center justify-between text-slate-500 font-body-sm text-body-sm">
+<span class="flex items-center gap-1.5">
+<span class="w-1.5 h-1.5 rounded-full bg-amber-700"></span>
+          3 vouchers applied
+        </span>
+<span class="flex items-center gap-1.5">
+<span class="w-1.5 h-1.5 rounded-full bg-teal-600"></span>
+          1 loyalty pass
+        </span>
+</div>
+</div>
+</div>
+<!-- Status Breakdown Card with Multi-Segment Rail -->
+<div class="rounded-2xl bg-surface/85 backdrop-blur-xl p-space-md shadow-sm flex flex-col gap-space-md">
+<div class="flex items-center justify-between">
+<div class="flex flex-col">
+<h2 class="font-headline-sm text-headline-sm text-ink-800">Order Status Breakdown</h2>
+<span class="font-body-sm text-body-sm text-text-secondary">Distribution of 18 tickets across production</span>
+</div>
+<span class="font-label-sm text-label-sm px-2.5 py-1 rounded-full bg-teal-100 text-teal-700 font-bold">100% Synced</span>
+</div>
+<!-- Segmented Production Bar -->
+<div class="w-full">
+<div class="h-3 w-full rounded-full bg-slate-100 flex overflow-hidden p-0.5 gap-0.5 shadow-inner">
+<div class="h-full rounded-full bg-teal-700" style="width: 28%;" title="Ready: 5"></div>
+<div class="h-full rounded-full bg-amber-500" style="width: 22%;" title="Processing: 4"></div>
+<div class="h-full rounded-full bg-teal-500" style="width: 17%;" title="Received / Weighed: 3"></div>
+<div class="h-full rounded-full bg-slate-400" style="width: 17%;" title="Ordered / Pending: 3"></div>
+<div class="h-full rounded-full bg-slate-700" style="width: 16%;" title="Picked up: 3"></div>
+</div>
+</div>
+<!-- Status Breakdown Rows -->
+<div class="flex flex-col gap-space-xs">
+<!-- Ready -->
+<div class="flex items-center justify-between p-space-sm rounded-xl bg-surface-container-low/60 hover:bg-surface-container-low transition-colors">
+<div class="flex items-center gap-space-sm min-w-0">
+<span class="px-2.5 py-1 rounded-full bg-teal-700 text-on-primary font-label-sm text-label-sm font-semibold whitespace-nowrap">Ready</span>
+<span class="font-body-md text-body-md text-ink-800 truncate">Cleaned, packed &amp; racked</span>
+</div>
+<div class="flex items-center gap-2 pl-2">
+<span class="font-label-md text-label-md text-slate-700 tabular-nums whitespace-nowrap">5 orders</span>
+<span class="font-body-sm text-body-sm text-slate-400">•</span>
+<span class="font-label-lg text-label-lg text-ink-800 tabular-nums whitespace-nowrap font-bold">38.20</span>
+</div>
+</div>
+<!-- Processing -->
+<div class="flex items-center justify-between p-space-sm rounded-xl bg-surface-container-low/60 hover:bg-surface-container-low transition-colors">
+<div class="flex items-center gap-space-sm min-w-0">
+<span class="px-2.5 py-1 rounded-full bg-amber-100 text-amber-700 font-label-sm text-label-sm font-semibold whitespace-nowrap">Processing</span>
+<span class="font-body-md text-body-md text-ink-800 truncate">Washing drum &amp; dry tumbler</span>
+</div>
+<div class="flex items-center gap-2 pl-2">
+<span class="font-label-md text-label-md text-slate-700 tabular-nums whitespace-nowrap">4 orders</span>
+<span class="font-body-sm text-body-sm text-slate-400">•</span>
+<span class="font-label-lg text-label-lg text-ink-800 tabular-nums whitespace-nowrap font-bold">32.00</span>
+</div>
+</div>
+<!-- Received / Weighed -->
+<div class="flex items-center justify-between p-space-sm rounded-xl bg-surface-container-low/60 hover:bg-surface-container-low transition-colors">
+<div class="flex items-center gap-space-sm min-w-0">
+<span class="px-2.5 py-1 rounded-full bg-teal-100 text-teal-700 font-label-sm text-label-sm font-semibold whitespace-nowrap">Received</span>
+<span class="font-body-md text-body-md text-ink-800 truncate">Sorted &amp; scale tag verified</span>
+</div>
+<div class="flex items-center gap-2 pl-2">
+<span class="font-label-md text-label-md text-slate-700 tabular-nums whitespace-nowrap">3 orders</span>
+<span class="font-body-sm text-body-sm text-slate-400">•</span>
+<span class="font-label-lg text-label-lg text-ink-800 tabular-nums whitespace-nowrap font-bold">24.60</span>
+</div>
+</div>
+<!-- Ordered / Pending weigh-in -->
+<div class="flex items-center justify-between p-space-sm rounded-xl bg-surface-container-low/60 hover:bg-surface-container-low transition-colors">
+<div class="flex items-center gap-space-sm min-w-0">
+<span class="px-2.5 py-1 rounded-full bg-slate-100 text-slate-700 font-label-sm text-label-sm font-semibold whitespace-nowrap">Pending Weigh</span>
+<span class="font-body-md text-body-md text-ink-800 truncate">Drop-box bag intake</span>
+</div>
+<div class="flex items-center gap-2 pl-2">
+<span class="font-label-md text-label-md text-slate-700 tabular-nums whitespace-nowrap">3 orders</span>
+<span class="font-body-sm text-body-sm text-slate-400">•</span>
+<span class="font-body-sm text-body-sm text-text-disabled uppercase font-medium whitespace-nowrap">unweighed</span>
+</div>
+</div>
+<!-- Picked up today -->
+<div class="flex items-center justify-between p-space-sm rounded-xl bg-surface-container-low/60 hover:bg-surface-container-low transition-colors">
+<div class="flex items-center gap-space-sm min-w-0">
+<span class="px-2.5 py-1 rounded-full bg-slate-100 text-slate-500 font-label-sm text-label-sm font-semibold whitespace-nowrap">Picked Up</span>
+<span class="font-body-md text-body-md text-ink-800 truncate">Collected by customer</span>
+</div>
+<div class="flex items-center gap-2 pl-2">
+<span class="font-label-md text-label-md text-slate-700 tabular-nums whitespace-nowrap">3 orders</span>
+<span class="font-body-sm text-body-sm text-slate-400">•</span>
+<span class="font-label-lg text-label-lg text-ink-800 tabular-nums whitespace-nowrap font-bold">28.00</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Operational Shift Pulse & Live Counter Team -->
+<div class="rounded-2xl bg-surface/85 backdrop-blur-xl p-space-md shadow-sm flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<div class="w-8 h-8 rounded-full bg-teal-100 text-teal-700 flex items-center justify-center">
+<span class="material-symbols-outlined text-[18px]">badge</span>
+</div>
+<div class="flex flex-col">
+<h3 class="font-headline-sm text-headline-sm text-ink-800">Counter Duty</h3>
+<span class="font-body-sm text-body-sm text-text-secondary">Active counter clerks: 2 on duty</span>
+</div>
+</div>
+<span class="font-label-sm text-label-sm px-2 py-0.5 rounded-full bg-surface-container text-primary font-semibold">Morning Shift</span>
+</div>
+<!-- Active Clerks Quick Avatars & Intake Stats -->
+<div class="grid grid-cols-2 gap-space-sm mt-1">
+<div class="flex items-center gap-2.5 p-2 rounded-xl bg-surface-container-low/70">
+<div class="w-8 h-8 rounded-full bg-primary text-on-primary flex items-center justify-center font-label-md text-label-md font-bold">
+          MJ
+        </div>
+<div class="flex flex-col min-w-0">
+<span class="font-label-md text-label-md text-ink-800 truncate">Mina Jensen</span>
+<span class="font-body-sm text-body-sm text-text-secondary tabular-nums">11 bags intake</span>
+</div>
+</div>
+<div class="flex items-center gap-2.5 p-2 rounded-xl bg-surface-container-low/70">
+<div class="w-8 h-8 rounded-full bg-teal-700 text-on-primary flex items-center justify-center font-label-md text-label-md font-bold">
+          KL
+        </div>
+<div class="flex flex-col min-w-0">
+<span class="font-label-md text-label-md text-ink-800 truncate">Kenji Lin</span>
+<span class="font-body-sm text-body-sm text-text-secondary tabular-nums">7 bags intake</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Recent High-Value Orders Ticket Strip -->
+<div class="rounded-2xl bg-surface/85 backdrop-blur-xl p-space-md shadow-sm flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<div class="w-8 h-8 rounded-full bg-amber-100 text-amber-700 flex items-center justify-center">
+<span class="material-symbols-outlined text-[18px]">star</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-ink-800">High-Value Tickets</h3>
+</div>
+<span class="font-label-sm text-label-sm text-text-secondary font-medium">Over 20.00</span>
+</div>
+<div class="flex flex-col gap-2 mt-1">
+<!-- High Value Item 1 -->
+<div class="flex items-center justify-between p-space-sm rounded-xl bg-surface-container-low/70">
+<div class="flex items-center gap-3 min-w-0">
+<div class="w-9 h-9 rounded-lg bg-teal-100 flex items-center justify-center text-teal-700 shrink-0">
+<span class="material-symbols-outlined text-[20px]">dry_cleaning</span>
+</div>
+<div class="flex flex-col min-w-0">
+<div class="flex items-center gap-1.5">
+<span class="font-label-lg text-label-lg text-ink-800 truncate">#CP-8842</span>
+<span class="font-label-sm text-label-sm px-1.5 py-0.2 rounded bg-teal-100 text-teal-700">Ready</span>
+</div>
+<span class="font-body-sm text-body-sm text-text-secondary truncate">Eleanor Vance • 8 Silk Suits &amp; Delicates</span>
+</div>
+</div>
+<div class="flex flex-col items-end shrink-0 pl-2">
+<span class="font-label-lg text-label-lg text-ink-800 tabular-nums font-bold">29.40</span>
+<span class="font-label-sm text-label-sm text-teal-700 font-semibold">Settled QR</span>
+</div>
+</div>
+<!-- High Value Item 2 -->
+<div class="flex items-center justify-between p-space-sm rounded-xl bg-surface-container-low/70">
+<div class="flex items-center gap-3 min-w-0">
+<div class="w-9 h-9 rounded-lg bg-amber-100 flex items-center justify-center text-amber-700 shrink-0">
+<span class="material-symbols-outlined text-[20px]">iron</span>
+</div>
+<div class="flex flex-col min-w-0">
+<div class="flex items-center gap-1.5">
+<span class="font-label-lg text-label-lg text-ink-800 truncate">#CP-8839</span>
+<span class="font-label-sm text-label-sm px-1.5 py-0.2 rounded bg-amber-100 text-amber-700">Washing</span>
+</div>
+<span class="font-body-sm text-body-sm text-text-secondary truncate">Marcus Chen • Premium Comforter + Duvet</span>
+</div>
+</div>
+<div class="flex flex-col items-end shrink-0 pl-2">
+<span class="font-label-lg text-label-lg text-ink-800 tabular-nums font-bold">22.50</span>
+<span class="font-label-sm text-label-sm text-text-disabled">On Delivery</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<script>
+  // Micro-interaction: Mark active bottom navigation pill state
+  document.addEventListener('DOMContentLoaded', () => {
+    const navLinks = document.querySelectorAll('nav a[data-path]');
+    navLinks.forEach((link) => {
+      if (link.getAttribute('data-path') === 'summary') {
+        link.classList.remove('text-text-secondary');
+        link.classList.add('text-teal-700', 'font-semibold');
+        const icon = link.querySelector('.material-symbols-outlined');
+        if (icon) {
+          icon.style.fontVariationSettings = "'FILL' 1";
+        }
+      } else {
+        link.classList.remove('text-teal-700', 'font-semibold');
+        link.classList.add('text-text-secondary');
+      }
+    });
+  });
+</script></main><nav class="fixed bottom-0 w-full z-50 pb-safe px-space-md pointer-events-none" data-active-classes="text-teal-700"><div class="mx-auto max-w-md mb-2 pointer-events-auto rounded-full bg-surface/80 backdrop-blur-xl shadow-[0_12px_32px_rgba(28,39,51,0.12)] p-1"><div class="flex items-center justify-around h-14"><a class="flex flex-col items-center justify-center min-w-[56px] min-h-[44px] text-text-secondary hover:text-ink-800 transition-colors" data-path="services" href="#"><span class="material-symbols-outlined text-[22px]">local_offer</span><span class="font-label-sm text-label-sm">Services</span></a><a class="flex flex-col items-center justify-center min-w-[56px] min-h-[44px] text-text-secondary hover:text-ink-800 transition-colors" data-path="vouchers" href="#"><span class="material-symbols-outlined text-[22px]">confirmation_number</span><span class="font-label-sm text-label-sm">Vouchers</span></a><a aria-current="page" class="flex flex-col items-center justify-center min-w-[56px] min-h-[44px] transition-colors text-teal-700" data-path="summary" href="#"><span class="material-symbols-outlined text-[22px]">bar_chart</span><span class="font-label-sm text-label-sm">Summary</span></a><a class="flex flex-col items-center justify-center min-w-[56px] min-h-[44px] text-text-secondary hover:text-ink-800 transition-colors" data-path="more" href="#"><span class="material-symbols-outlined text-[22px]">tune</span><span class="font-label-sm text-label-sm">More</span></a></div></div></nav></body></html>
