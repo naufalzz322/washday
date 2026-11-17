@@ -343,6 +343,7 @@ void main() {
     expect(find.text('LDR-0031 · Wash & fold'), findsOneWidget);
     expect(find.text('2 of 10'), findsOneWidget);
 
+    await tester.ensureVisible(find.widgetWithText(WashdayFilterChip, 'All'));
     await tester.tap(find.widgetWithText(WashdayFilterChip, 'All'));
     await tester.pumpAndSettle();
 
@@ -352,6 +353,7 @@ void main() {
     expect(find.text('LDR-0045 · Press only'), findsOneWidget);
     expect(find.text('10 orders'), findsOneWidget);
 
+    await tester.ensureVisible(find.byKey(const Key('orders-filter-button')));
     await tester.tap(find.byKey(const Key('orders-filter-button')));
     await tester.pumpAndSettle();
 
@@ -367,6 +369,9 @@ void main() {
     expect(find.text('LDR-0045 · Press only'), findsOneWidget);
     expect(find.text('LDR-0031 · Wash & fold'), findsNothing);
 
+    await tester.ensureVisible(
+      find.widgetWithText(WashdayFilterChip, 'Active'),
+    );
     await tester.tap(find.widgetWithText(WashdayFilterChip, 'Active'));
     await tester.pumpAndSettle();
 
@@ -384,6 +389,7 @@ void main() {
     expect(find.text('LDR-0031 · Wash & fold'), findsOneWidget);
     expect(find.text('LDR-0045 · Press only'), findsOneWidget);
 
+    await tester.ensureVisible(find.byKey(const Key('orders-filter-button')));
     await tester.tap(find.byKey(const Key('orders-filter-button')));
     await tester.pumpAndSettle();
     await tester.tap(find.text('Last 30 days'));
@@ -398,6 +404,7 @@ void main() {
     await tester.tap(find.text('Clear filters'));
     await tester.pumpAndSettle();
 
+    await tester.ensureVisible(find.byKey(const Key('orders-filter-button')));
     await tester.tap(find.byKey(const Key('orders-filter-button')));
     await tester.pumpAndSettle();
     await tester.tap(find.text('Today'));
@@ -414,6 +421,7 @@ void main() {
     await tester.tap(find.text('Clear filters'));
     await tester.pumpAndSettle();
 
+    await tester.ensureVisible(find.byKey(const Key('orders-filter-button')));
     await tester.tap(find.byKey(const Key('orders-filter-button')));
     await tester.pumpAndSettle();
     await tester.tap(find.text('Custom range'));
@@ -495,12 +503,18 @@ void main() {
     await tester.tap(find.text('Clear filters'));
     await tester.pumpAndSettle();
 
-    await tester.drag(
-      find.byType(SingleChildScrollView).first,
-      const Offset(0, 380),
-    );
+    // Earlier ensureVisible calls leave the page scrolled; pin to the top so
+    // the downward drag overscrolls and triggers the refresh indicator.
+    final pageScroll = find.byType(SingleChildScrollView).first;
+    Scrollable.of(
+      tester.element(find.text('Order history')),
+    ).position.jumpTo(0);
+    await tester.pumpAndSettle();
+
+    await tester.drag(pageScroll, const Offset(0, 380));
     await tester.pump();
-    await tester.pump(const Duration(milliseconds: 300));
+    await tester.pump(const Duration(milliseconds: 600));
+    await tester.pump(const Duration(milliseconds: 100));
 
     expect(find.byType(WashdaySkeletonBlock), findsWidgets);
 
@@ -510,6 +524,61 @@ void main() {
     expect(find.byType(WashdaySkeletonBlock), findsNothing);
     expect(find.text('LDR-0042 · Express wash'), findsOneWidget);
     expect(find.text('10 orders'), findsOneWidget);
+    expect(tester.takeException(), isNull);
+  });
+
+  testWidgets('status chips scroll with the arrow buttons on a narrow phone', (
+    tester,
+  ) async {
+    _usePhone(tester, width: 360);
+
+    final router = buildWashdayRouter();
+    await tester.pumpWidget(_routerApp(router));
+    await tester.pumpAndSettle();
+
+    router.go('/customer/orders');
+    await tester.pumpAndSettle();
+    await tester.pump(const Duration(milliseconds: 700));
+    await tester.pumpAndSettle();
+
+    final scrollable = find.byKey(const Key('orders-status-scroll'));
+    expect(scrollable, findsOneWidget);
+
+    double offset() =>
+        tester.widget<SingleChildScrollView>(scrollable).controller!.offset;
+
+    expect(offset(), 0);
+    expect(
+      tester
+          .widget<GestureDetector>(
+            find.descendant(
+              of: find.byKey(const Key('orders-status-left')),
+              matching: find.byType(GestureDetector),
+            ),
+          )
+          .onTap,
+      isNull,
+      reason: 'Left arrow should start disabled at the first chip',
+    );
+
+    await tester.tap(find.byKey(const Key('orders-status-right')));
+    await tester.pumpAndSettle();
+
+    expect(offset(), greaterThan(0));
+    expect(find.text('All').hitTestable(), findsNothing);
+    expect(tester.takeException(), isNull);
+
+    await tester.tap(find.byKey(const Key('orders-status-left')));
+    await tester.pumpAndSettle();
+
+    expect(offset(), 0);
+    expect(find.text('All'), findsOneWidget);
+
+    // A manual drag also scrolls the row.
+    await tester.drag(scrollable, const Offset(-200, 0));
+    await tester.pumpAndSettle();
+
+    expect(offset(), greaterThan(0));
     expect(tester.takeException(), isNull);
   });
 

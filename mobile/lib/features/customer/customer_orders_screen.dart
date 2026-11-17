@@ -287,28 +287,11 @@ class _CustomerOrdersScreenState extends ConsumerState<CustomerOrdersScreen>
                 ),
               ),
               const SizedBox(height: 11),
-              Wrap(
-                spacing: 7,
-                runSpacing: 7,
-                crossAxisAlignment: WrapCrossAlignment.center,
-                children: [
-                  for (final option in const [
-                    ('all', 'All'),
-                    ('active', 'Active'),
-                    ('declined', 'Declined'),
-                    ('collected', 'Collected'),
-                  ])
-                    WashdayFilterChip(
-                      label: option.$2,
-                      selected: _filter == option.$1,
-                      onTap: () => setState(() => _filter = option.$1),
-                    ),
-                  _FilterMenuButton(
-                    key: const Key('orders-filter-button'),
-                    active: filtered,
-                    onTap: _openFilters,
-                  ),
-                ],
+              _OrderStatusChipRow(
+                filter: _filter,
+                filterActive: filtered,
+                onStatusSelected: (value) => setState(() => _filter = value),
+                onFilterTapped: _openFilters,
               ),
               if (filtered) ...[
                 const SizedBox(height: 8),
@@ -419,6 +402,216 @@ class _FilterMenuButton extends StatelessWidget {
                   ),
               ],
             ),
+          ),
+        ),
+      ),
+    );
+  }
+}
+
+/// Horizontally scrollable status chip row with left/right nudge buttons.
+///
+/// The status chips do not fit one line on narrow phones, so the row scrolls
+/// and the arrow buttons page it in both directions.
+class _OrderStatusChipRow extends StatefulWidget {
+  const _OrderStatusChipRow({
+    required this.filter,
+    required this.filterActive,
+    required this.onStatusSelected,
+    required this.onFilterTapped,
+  });
+
+  final String filter;
+  final bool filterActive;
+  final ValueChanged<String> onStatusSelected;
+  final VoidCallback onFilterTapped;
+
+  @override
+  State<_OrderStatusChipRow> createState() => _OrderStatusChipRowState();
+}
+
+class _OrderStatusChipRowState extends State<_OrderStatusChipRow> {
+  static const _statusOptions = [
+    ('all', 'All'),
+    ('active', 'Active'),
+    ('declined', 'Declined'),
+    ('collected', 'Collected'),
+  ];
+
+  static const _scrollStep = 96.0;
+
+  late final ScrollController _scrollController;
+  bool _canScrollLeft = false;
+  bool _canScrollRight = false;
+
+  @override
+  void initState() {
+    super.initState();
+    _scrollController = ScrollController();
+    _scrollController.addListener(_updateArrowVisibility);
+    WidgetsBinding.instance.addPostFrameCallback((_) {
+      if (mounted) _updateArrowVisibility();
+    });
+  }
+
+  @override
+  void dispose() {
+    _scrollController.dispose();
+    super.dispose();
+  }
+
+  void _updateArrowVisibility() {
+    final position = _scrollController.position;
+    if (!position.hasContentDimensions || !position.hasViewportDimension) {
+      return;
+    }
+    final maxExtent = position.maxScrollExtent;
+    final offset = position.pixels;
+    final canLeft = offset > 1;
+    final canRight = offset < maxExtent - 1;
+    if (canLeft != _canScrollLeft || canRight != _canScrollRight) {
+      setState(() {
+        _canScrollLeft = canLeft;
+        _canScrollRight = canRight;
+      });
+    }
+  }
+
+  void _nudge(double direction) {
+    final target = (_scrollController.offset + direction * _scrollStep).clamp(
+      0.0,
+      _scrollController.position.maxScrollExtent,
+    );
+    _scrollController.animateTo(
+      target,
+      duration: const Duration(milliseconds: 220),
+      curve: Curves.easeOutCubic,
+    );
+  }
+
+  void _select(String value) {
+    widget.onStatusSelected(value);
+    final index = _statusOptions.indexWhere((option) => option.$1 == value);
+    if (index < 0) return;
+    // Ensure the selected chip is fully visible after the rebuild.
+    WidgetsBinding.instance.addPostFrameCallback((_) {
+      if (!mounted || !_scrollController.hasClients) return;
+      const margin = 8.0;
+      final start = index * (_scrollStep + 7) - margin;
+      final end = start + _scrollStep + margin * 2;
+      if (_scrollController.offset > start) {
+        _scrollController.animateTo(
+          start.clamp(0.0, _scrollController.position.maxScrollExtent),
+          duration: const Duration(milliseconds: 220),
+          curve: Curves.easeOutCubic,
+        );
+      } else if (_scrollController.offset +
+              _scrollController.position.viewportDimension <
+          end) {
+        _scrollController.animateTo(
+          (end - _scrollController.position.viewportDimension).clamp(
+            0.0,
+            _scrollController.position.maxScrollExtent,
+          ),
+          duration: const Duration(milliseconds: 220),
+          curve: Curves.easeOutCubic,
+        );
+      }
+    });
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return Row(
+      children: [
+        _ScrollArrowButton(
+          key: const Key('orders-status-left'),
+          icon: Icons.chevron_left_rounded,
+          enabled: _canScrollLeft,
+          semanticLabel: 'Scroll status filters left',
+          onTap: () => _nudge(-1),
+        ),
+        Expanded(
+          child: SingleChildScrollView(
+            key: const Key('orders-status-scroll'),
+            controller: _scrollController,
+            scrollDirection: Axis.horizontal,
+            clipBehavior: Clip.none,
+            padding: const EdgeInsets.symmetric(horizontal: 2),
+            child: Row(
+              mainAxisSize: MainAxisSize.min,
+              children: [
+                for (final option in _statusOptions) ...[
+                  WashdayFilterChip(
+                    key: ValueKey('status-chip-${option.$1}'),
+                    label: option.$2,
+                    selected: widget.filter == option.$1,
+                    onTap: () => _select(option.$1),
+                  ),
+                  const SizedBox(width: 7),
+                ],
+                _FilterMenuButton(
+                  key: const Key('orders-filter-button'),
+                  active: widget.filterActive,
+                  onTap: widget.onFilterTapped,
+                ),
+              ],
+            ),
+          ),
+        ),
+        _ScrollArrowButton(
+          key: const Key('orders-status-right'),
+          icon: Icons.chevron_right_rounded,
+          enabled: _canScrollRight,
+          semanticLabel: 'Scroll status filters right',
+          onTap: () => _nudge(1),
+        ),
+      ],
+    );
+  }
+}
+
+class _ScrollArrowButton extends StatelessWidget {
+  const _ScrollArrowButton({
+    super.key,
+    required this.icon,
+    required this.enabled,
+    required this.semanticLabel,
+    required this.onTap,
+  });
+
+  final IconData icon;
+  final bool enabled;
+  final String semanticLabel;
+  final VoidCallback onTap;
+
+  @override
+  Widget build(BuildContext context) {
+    return Semantics(
+      button: true,
+      label: semanticLabel,
+      child: GestureDetector(
+        onTap: enabled ? onTap : null,
+        child: AnimatedContainer(
+          duration: const Duration(milliseconds: 180),
+          width: 28,
+          height: 38,
+          margin: const EdgeInsets.symmetric(horizontal: 2),
+          decoration: BoxDecoration(
+            color: enabled ? WashdayColors.white : WashdayColors.surfaceMuted,
+            borderRadius: BorderRadius.circular(WashdayRadii.pill),
+            border: Border.all(
+              color: enabled
+                  ? WashdayColors.hairlineStrong
+                  : WashdayColors.hairline,
+            ),
+          ),
+          child: Icon(
+            icon,
+            size: 20,
+            color: enabled
+                ? WashdayColors.inkSecondary
+                : WashdayColors.textFaint,
           ),
         ),
       ),

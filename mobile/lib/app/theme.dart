@@ -40,6 +40,7 @@ abstract final class WashdayColors {
   static const card = Color(0xFFFFFFFF);
   static const cardBorder = Color(0xFFE3EAEF);
   static const surfaceMuted = Color(0xFFF7FAFC);
+  static const textFaint = Color(0xFF9AAABB);
 
   static const deepStart = Color(0xFF123B47);
   static const deepEnd = Color(0xFF0B2630);
